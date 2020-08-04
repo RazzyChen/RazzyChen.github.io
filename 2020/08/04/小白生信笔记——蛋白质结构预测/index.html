@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Computional biogloy,小白生信笔记,Protein structure prediction," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="基于First Principles如何预测蛋白质的折叠到今天仍旧是一个巨大的挑战。随着时代的发展人们开始寻求各种各样的方法来辅助预测，比如说残差神经网络、利用共进化信息等多种方法。本文从基础开始讲起简单概括了一下Homology modeling以及Ab Initio等方法的一些基本概念和原理。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小白生信笔记——蛋白质结构预测">
+<meta property="og:url" content="http://yoursite.com/2020/08/04/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B/index.html">
+<meta property="og:site_name" content="Zichen Yang&#39;s Blog">
+<meta property="og:description" content="基于First Principles如何预测蛋白质的折叠到今天仍旧是一个巨大的挑战。随着时代的发展人们开始寻求各种各样的方法来辅助预测，比如说残差神经网络、利用共进化信息等多种方法。本文从基础开始讲起简单概括了一下Homology modeling以及Ab Initio等方法的一些基本概念和原理。">
+<meta property="article:published_time" content="2020-08-04T14:55:32.000Z">
+<meta property="article:modified_time" content="2020-08-04T15:04:35.658Z">
+<meta property="article:author" content="Yangzichen">
+<meta property="article:tag" content="Computional biogloy">
+<meta property="article:tag" content="小白生信笔记">
+<meta property="article:tag" content="Protein structure prediction">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '小步'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/08/04/小白生信笔记——蛋白质结构预测/"/>
+
+
+
+
+
+  <title>小白生信笔记——蛋白质结构预测 | Zichen Yang's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Zichen Yang's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Undergraduate Student of Biotechnology</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about-me/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/04/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Yangzichen">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Zichen Yang's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">小白生信笔记——蛋白质结构预测</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-04T22:55:32+08:00">
+                2020-08-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
+                    <span itemprop="name">小白生信笔记</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+              <div class="post-description">
+                  基于First Principles如何预测蛋白质的折叠到今天仍旧是一个巨大的挑战。随着时代的发展人们开始寻求各种各样的方法来辅助预测，比如说残差神经网络、利用共进化信息等多种方法。本文从基础开始讲起简单概括了一下Homology modeling以及Ab Initio等方法的一些基本概念和原理。
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>这篇文章参考了如下文章或网页</p>
+<ol>
+<li>Huang, P. S., Boyken, S. E. &amp; Baker, D. The coming of age of de novo protein design. Nature 537, 320–327 (2016). DOI: 10.1038/nature19946</li>
+<li>Haddad, Y., Adam, V. &amp; Heger, Z. Ten quick tips for homology modeling of high-resolution protein 3D structures. PLOS Comput. Biol. 16,  (2020).  DOI:10.1371/journal.pcbi.1007449</li>
+<li>Song, Y. et al. High-resolution comparative modeling with RosettaCM. Structure 21, 1735–1742 (2013). DOI: 10.1016/j.str.2013.08.005</li>
+<li>Leaver-Fay A, Tyka M, Lewis SM, et al. ROSETTA3: an object-oriented software suite for the simulation and design of macromolecules. Methods Enzymol. 2011;487:545‐574. DOI: 10.1016/B978-0-12-381270-4.00019-6</li>
+<li>Alford, R. F. <em>et al.</em> The Rosetta All-Atom Energy Function for Macromolecular Modeling and Design. J. Chem. Theory Comput. 13, 3031–3048 (2017). DOI: 10.1021/acs.jctc.7b00125</li>
+<li>Bradley P, Misura KM, Baker D (2005). Toward high-resolution de novo structure prediction for small proteins. Science 309, 1868-71.  DOI: 10.1126/science.1113801</li>
+<li>Kim DE, Blum B, Bradley P, Baker D (2009). Sampling bottlenecks in de novo protein structure prediction. <em>J Mol Biol</em> 393, 249-60. DOI:10.1016/j.jmb.2009.07.063)</li>
+<li>Bonneau R, Strauss CE, Rohl CA, Chivian D, Bradley P, Malmstrom L, Robertson T, Baker D. (2002) De novo prediction of three-dimensional structures for major protein families. J Mol Biol 322(1):65-78. DOI: 10.1016/S0022-2836(02)00698-8</li>
+<li><a href="https://www.rosettacommons.org/docs/latest/rosetta_basics/structural_concepts/Rosetta-overview" target="_blank" rel="noopener">An introduction to important Rosetta concepts </a></li>
+<li><a href="https://www.rosettacommons.org/docs/latest/application_documentation/structure_prediction/RosettaCM" target="_blank" rel="noopener">RosettaCM - Comparative Modeling with Rosetta</a></li>
+<li><a href="https://www.rosettacommons.org/docs/latest/rosetta_basics/structural_concepts/centroid-vs-fullatom" target="_blank" rel="noopener">Centroid and Full-atom modes</a></li>
+<li><a href="https://www.rosettacommons.org/docs/latest/rosetta_basics/Glossary/Glossary#b" target="_blank" rel="noopener">Rosetta Glossary</a></li>
+<li><a href="https://www.rosettacommons.org/docs/latest/rosetta_basics/structural_concepts/foldtree-overview" target="_blank" rel="noopener">FoldTree overview and concepts</a></li>
+<li><a href="https://www.rosettacommons.org/docs/latest/rosetta_basics/structural_concepts/atomtree-overview" target="_blank" rel="noopener">AtomTree overview and concepts</a></li>
+<li><a href="https://www.rosettacommons.org/docs/latest/application_documentation/structure_prediction/abinitio-relax" target="_blank" rel="noopener">AbinitioRelax</a> </li>
+<li><a href="https://www.rosettacommons.org/docs/latest/application_documentation/structure_prediction/abinitio" target="_blank" rel="noopener">Abinitio</a></li>
+<li><a href="https://www.rosettacommons.org/demos/latest/tutorials/denovo_structure_prediction/Denovo_structure_prediction" target="_blank" rel="noopener">De novo structure prediciton</a></li>
+<li><a href="http://how2rosetta.cn/?article=rosettacm-%e8%9b%8b%e7%99%bd%e9%ab%98%e7%b2%be%e5%ba%a6%e6%af%94%e5%af%b9%e5%bb%ba%e6%a8%a1" target="_blank" rel="noopener">Rosetta中文社区 RosettaCM—蛋白高精度对比建模</a></li>
+<li><a href="http://how2rosetta.cn/?article=trrosetta-%e5%9c%a8%e5%8f%b0%e5%bc%8f%e6%9c%ba%e4%b8%8a%e4%bb%8e%e5%a4%b4%e6%8a%98%e5%8f%a0%e4%b8%80%e4%b8%aa%e8%9b%8b%e7%99%bd" target="_blank" rel="noopener">Rosetta中文社区—trRosetta</a></li>
+</ol>
+<p>作者学疏才浅，难免会有疏漏，欢迎指正，谢谢！<br>字多图少，希望你能看到最后并有所收获：）</p>
+<h2 id="一切的开始"><a href="#一切的开始" class="headerlink" title="一切的开始"></a>一切的开始</h2><p>蛋白质的三维结构的确定一直是个挑战。一个有200个氨基酸组成的蛋白质，其序列的可能性就达到了20$^{200}$,远远大于了宇宙中近似的原子总数（大约为$6 \times 10 ^{79}$）,如此庞大的数目无法通过蛮力进行运算。然而，经过多年的发展，确定一个未知蛋白的三维结构已经成为一个可操作的挑战，在许多情况下都可以进行合理并且准确的预测。</p>
+<p>基本的思路是这样的：因为要建模的分子有一定数量的自由度（Degree of freedom, DOF）比如说蛋白质折叠中的phi/psi/chi Angle，对接中的刚体旋转，Design中的氨基酸序列。再加上默认假设的其他固定参数，这些DOFs通过 “refold “和 “pack_rotamers “等过程，被转化为原子在坐标系中实际的xyz位置。用一个基于物理学的能量函数（ Score function）来评估当前原子位置下的能量状态。<br>自由度-坐标-能量 与 Monte Carlo Minimization等算法相结合，对由这些DOFs定义的构象空间进行采样，以找到具有最低能量状态的构象，根据fig 1. 蛋白质势能图的漏斗假说(Funnel hypothesis of the protein potential energy landscape)，天然蛋白质构象处于漏斗的底部，自由能最低，即全局能量最小。<br>下面我们首先会介绍一些基本的概念，之后会介绍两种结构预测的方法，homology modeling 和 Ab initio</p>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>我们要介绍的基本概念有以下几个：</p>
+<ul>
+<li>Centroid &amp;  FullAtom</li>
+<li>FoldTree &amp; AtomTree &amp; DomainMap</li>
+<li>Score Function</li>
+</ul>
+<h3 id="Fullatom-amp-Centroid"><a href="#Fullatom-amp-Centroid" class="headerlink" title="Fullatom &amp; Centroid"></a>Fullatom &amp; Centroid</h3><p>Fullatom，也被称作all atom。顾名思义，很好理解就是一个氨基酸残基中的所有原子都会被表示出来（R基也会用具体的原子表示出来）<br>在一个拥有无限时间，计算机算力无穷大的世界里，我们可以对全部的原子进行模拟。不过在现实世界中，试图包含所有R基的同时进行广泛的骨架采样是不切实际的。如果你不信邪，试图这样去做你将面临两个巨大的问题：</p>
+<ul>
+<li>计算所有原子对之间的相互作用所消耗的算力会随着原子数量的增加而迅速增长</li>
+<li>全原子构象空间是非常崎岖的</li>
+</ul>
+<p>为了绕过这两个问题，就在需要广泛采样的时候（比如Ab initio 的初始阶段）使用精简的采样模式，也就是Centroid。在该模式下每个残基的5个主链原子不会改变，所有的R基仅仅会用一个伪原子表示。</p>
+<p>一般在大规模的Centroid采样过后，会回到fullatom下进行细化使得软件可以更精准的侧链之间的相互作用以及蛋白质结构其他更细微的细节进行打分。</p>
+<h3 id="AtomTree-amp-FoldTree-amp-DomainMap"><a href="#AtomTree-amp-FoldTree-amp-DomainMap" class="headerlink" title="AtomTree &amp; FoldTree &amp; DomainMap"></a>AtomTree &amp; FoldTree &amp; DomainMap</h3><p>让我们转到 “运动学 “层，看看系统中的自由度(DOFs)是如何转化为实际的原子位置的。运动学层的两个概念分别是AtomTree和FoldTree。<br>一言以蔽之：AtomTree是一种数据结构（计算机/图论意义上的），用于跟踪和处理原子的笛卡尔坐标（xyz）和内部坐标（长度、角度、二面角），同时保持两者的同步。如果我们进一步地解释什么是AtomTree的话，我们不妨假设定义一颗树，指定某一个原子为树的树根，向外（下游）遍历系统中所有原子，生成对应的笛卡尔坐标。把系统的内坐标映射到单个原子上，每一个原子存储了相对于三个上游原子定义的参考框架的键长、键角和斜面角。那么我们假设的这棵树就是AtomTree了。</p>
+<p>为了简化指定AtomTree的过程，我们可以定义一个残基级的运动学连接树，称为FoldTree，其中节点对应单个残基而不是原子。如果已知FoldTree那么AtomTree自动被建立。</p>
+<p>为了有效地进行评分，AtomTree会跟踪上次评分函数评估后哪些DOF发生了变化。如果两个残基相互之间没有移动，那么上次评分函数评估中的一些相互作用能可以被重用。为了告知哪些残基发生了移动，AtomTree会递归遍历树并对每一个残基结构创建 “颜色”；如果两个残基没有相互移动，那么在这个遍历中它们被分配了相同的“颜色”。如果一个残基的内部自由度发生了变化，那么它就会被赋予新的“颜色”，而这就意味着它的旧能量不能在下一次的评分评估中被重用。保持着色的数据结构被称为DomainMap。</p>
+<h3 id="Score-function"><a href="#Score-function" class="headerlink" title="Score function"></a>Score function</h3><p>基于Anfinsen的假设，即天然蛋白质构象代表独特的、低能的、热力学稳定的构象。这些折叠态所代表的能量是能量图上的极小值，它们在吉布斯自由能方面有一个有利的净变化:即相对于未折叠态而言，焓（$\Delta H$）和熵（$T \Delta S$）的贡献之和。大分子建模程序所执行的是一个启发性的方法，即逐次逼近最优解的方法，所以需要一个数学函数来区分未折叠、折叠和天然构象。这个函数就是Score function。通常情况下，这些函数是能量和自由度的函数，总能量是这些函数的线性组合。<br>截止本稿发出时，Rosetta的默认Score function是Rosetta Energy Function 2015(REF15)。具体评分项权重见下图，具体算法参见参考文献5。</p>
+<p>Centroid score function相对于Fullatom score function来说虽然解释结果方面有些许欠缺，但Centroid score function有一个巨大的优势，那就是能量图谱很光滑，对非常不同的构象进行采样比较容易。</p>
+<h2 id="Homology-modeling"><a href="#Homology-modeling" class="headerlink" title="Homology modeling"></a>Homology modeling</h2><p>随着高通量测序技术的发展，人们已经确定了大量的蛋白质序列。幸运的是，我们现在已经通过Cryo-EM等方法知道了大多数蛋白质家族中至少一个代表性的结构。使用这些代表性的结构作为起点，Homology modeling（Comparative modeling）可以用来预测许多蛋白质的结构。在有已知结构且具有相当的identity时我们可以使用Homology modeling。<br>基本上Homology modeling思想是这样的：首先，将被建模的蛋白质一级序列与已知结构且具有一定同源性（一般要求identity大于25% RosettaCM可以做到15%）序列的进行多序列比对。之后，在这些信息的指导下建立三维模型。人们已经开发出许多优秀的Homology modeling软件，包括广泛使用的MODELLER、I-TASSER等WEB server。<br>如果我们细化一下工作流程，那么会得到这样一张图：<br>上游分析是多序列对比，下游是Docking、MD或者其他方法。<br>Homology modeling的算法以及步骤请参考Rosetta中文社区文章，在此不赘述。<br><a href="http://how2rosetta.cn/?article=rosettacm-%e8%9b%8b%e7%99%bd%e9%ab%98%e7%b2%be%e5%ba%a6%e6%af%94%e5%af%b9%e5%bb%ba%e6%a8%a1" target="_blank" rel="noopener">Rosetta中文社区 RosettaCM—蛋白高精度对比建模</a><br>文献2这篇文章中提到了关于Homology modeling的十个建议供你参考。</p>
+<h2 id="Ab-initio-structure-prediction"><a href="#Ab-initio-structure-prediction" class="headerlink" title="Ab initio structure prediction"></a>Ab initio structure prediction</h2><p>试图从头开始基于第一性原理(The first principles)来解决蛋白质折叠问题，即在没有同源蛋白质结构或同源度不足以支撑建模的情况下，寻找给定氨基酸序列的在构象空间中的最低能量结构（不过有一个前提，我们假设Score function的最小值所代表的构象与蛋白质自然发生折叠的结构是一致的）。在没有已知结构的同源物的情况下，要正确预测蛋白质的结构，除了最小的蛋白质外，还很难。主要的挑战是必须取样的骨架构象空间的过于庞大，而且正确的结构比所有的结构的能量低，但由于能量函数很崎岖所以正确的结构往往很难被找到。然而，如果采样过程是由额外的信息指导的，如基于共进化的距离约束等。在这种情况下，可以预测复杂蛋白质的结构。<br>下面Abinitio Relax—Rosetta框架下的从头预测蛋白质结构的程序，如果你设置好了环境变量，那么你可以在<code>$ROSETTA/main/source/src/apps/public/AbinitioRelax.cc</code> 这个路径下找到Abinitio的可执行文件，在<code>$ROSETTA/demos/public/abinitio/</code>目录中找到教程所使用的的文件。</p>
+<h3 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h3><p>AbinitioRelax主要包括两个步骤：</p>
+<ul>
+<li>基于经验的Centroid score function，对构象空间进行粗粒度的搜索</li>
+<li>使用基于Fullatom score function进行全原子的优化</li>
+</ul>
+<p>第二步比第一步的计算量大得多，也比较耗时。代码和演示部分中描述的例子运行在Macbook Pro(2018Mid,8265U,16G,openMPI并行)上生成一个117个残基蛋白的模型大约需要8分钟。AbinitioRelax运行可以通过命令行选项输出由用户定义的模型数量（参见下面的option部分）。为了增加构象采样，该应用程序可以通过执行多个作业，每个作业都使用一个唯一的随机数种子（option会讲），很容易并行化。由于Fullatom score function对不完美的原子相互作用非常敏感，而且在采样不足的情况下会存在更多的噪声，因此向原生结构收敛可能需要大量的采样(输出多少会有参考)。更详细的算法实现部分可以参考参考文献16</p>
+<h3 id="输入文件"><a href="#输入文件" class="headerlink" title="输入文件"></a>输入文件</h3><ul>
+<li>Fasta文件：你可以在这个<code>$ROSETTA/demos/public/abinitio/</code>里面找到它</li>
+<li>片段文件：你可以使用服务器（<a href="http://robetta.bakerlab.org/fragmentsubmit.jsp" target="_blank" rel="noopener">http://robetta.bakerlab.org/fragmentsubmit.jsp</a> ）或者在本地安装 rosetta_fragments包来获得， <code>$ROSETTA/demos/public/abinitio/</code>内有</li>
+<li>原生结构（可选）：PDB结构可用于基准测试。使用时，每个模型的RMSD与原生的RSD一同被计算出来，并作为分数中的额外一列提供。</li>
+<li>Psipred 提供的二级结构psipred_ss2预测文件（可选）：当使用 -use_filters 和 -kill_hairpins 时必须（在Rosetta3.4 - 3.5时发生了变化，Rosetta社区帖子如下<a href="https://www.rosettacommons.org/content/killhairpin-error" target="_blank" rel="noopener">here</a> )</li>
+</ul>
+<h3 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h3><p>这些选项没必要逐个跟在命令后，建立一个flags文件，将参数写入即可。运行的时候只需要输入<code>AbinitioRelax.mpi.macosclangrelease @flags</code>即可全部调用（我的版本是mpi并行，平台是macOS所以你的命令会和我不一样，请参考社区其他文章）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-in:file:native .&#x2F;input_files&#x2F;1elw.pdb            原生结构 (可选)</span><br><span class="line">(or -in:file:fasta .&#x2F;input_files&#x2F;1elwA.fasta)     蛋白质序列fasta格式 (要求原生结构没有提供)</span><br><span class="line">-in:file:frag3 .&#x2F;input_files&#x2F;aa1elwA03_05.200_v1_3  3残基片段 (片段文件)</span><br><span class="line">-in:file:frag9 .&#x2F;input_files&#x2F;aa1elwA09_05.200_v1_3  9残基片段 </span><br><span class="line">-database path&#x2F;to&#x2F;rosetta&#x2F;main&#x2F;database             Rosetta database的环                                                     境变量，编译的时候如果写                                                     过这里可以不写</span><br><span class="line">-abinitio:relax                                    是否在从头预测之后Relax default&#x3D;false.</span><br><span class="line">-nstruct 1                                          输出结构数量</span><br><span class="line">-out:file:silent 1elwA_silent.out               使用silent file输                                                         出,default&#x3D;default.out</span><br><span class="line">(or -out:pdb)                                       使用PDB文件输出, default&#x3D;false</span><br><span class="line">-out:path &#x2F;my&#x2F;path                                  输出PDB文件的构象，默认是&#39;.&#39;</span><br></pre></td></tr></table></figure>
+<p>有几个可选的设置，都是经过基准测试和彻底测试的最佳性能（推荐使用这些选项）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-use_filters true                        使用回旋半径(RG)、接触顺序和                                                sheet过滤器个选项通过在过滤失                                                败时不继续进行细化来节省计算。                                                注意的是，对于某些序列，很大一                                                部分模型可能会被过滤失败。筛选                                                器是为了识别具有非蛋白特征的模                                                型。过滤器失败的模型的名称以F_                                                开头。 </span><br><span class="line">-psipred_ss2 .&#x2F;input_files&#x2F;1elwA.psipred_ss2   使用psipred预测的二级结构数据                                                （要求使用-use_filters）</span><br><span class="line">-abinitio::increase_cycles 10                 Abinitio每个阶段的循环次数将按                                               这个为系数增加</span><br><span class="line">-abinitio::rg_reweight 0.5                    回旋半径(RG)的权重</span><br><span class="line">-abinitio::rsd_wt_helix 0.5 </span><br><span class="line">-abinitio::rsd_wt_loop 0.5</span><br><span class="line">-relax::fast                                   relax的模式，没有明显性能损失</span><br><span class="line">-kill_hairpins .&#x2F;input_files&#x2F;1elwA.psipred_ss2 在打分中设置 hairpin                                                                        killing</span><br></pre></td></tr></table></figure>
+<p>在集群上跑多任务时你可以会用到的参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">-constant_seed                                 seed为常数</span><br><span class="line"></span><br><span class="line">-jran 1234567                                  指定seed，每个seed应该唯一</span><br><span class="line"></span><br><span class="line">-seed_offset 10                                这个值将被添加到随机数种子中。                                                              当使用时间作为seed并将许多作业                                                              提交到一个集群时非常有用。如果作业在同一秒内启                                                  动，当使用唯一偏移量时，它们仍然会有不同的初始                                                  seed。</span><br></pre></td></tr></table></figure>
+<p>最佳性能的标准命令行如下所示（nstruct的一般在几千到上万不等，看计算情况）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">-database &#x2F;path&#x2F;to&#x2F;rosetta&#x2F;main&#x2F;database </span><br><span class="line">        -in:file:fasta .&#x2F;input_files&#x2F;1elwA.fasta </span><br><span class="line">        -in:file:native .&#x2F;input_files&#x2F;1elw.pdb </span><br><span class="line">        -in:file:frag3 .&#x2F;input_files&#x2F;aa1elwA03_05.200_v1_3 </span><br><span class="line">        -in:file:frag9 .&#x2F;input_files&#x2F;aa1elwA09_05.200_v1_3 </span><br><span class="line">        -abinitio:relax </span><br><span class="line">        -relax:fast </span><br><span class="line">        -abinitio::increase_cycles 10 </span><br><span class="line">        -abinitio::rg_reweight 0.5 </span><br><span class="line">        -abinitio::rsd_wt_helix 0.5 </span><br><span class="line">        -abinitio::rsd_wt_loop 0.5 </span><br><span class="line">        -use_filters true </span><br><span class="line">        -psipred_ss2 .&#x2F;input_files&#x2F;1elwA.psipred_ss2 </span><br><span class="line">        -kill_hairpins .&#x2F;input_files&#x2F;1elwA.psipred_ss2 </span><br><span class="line">        -out:file:silent 1elwA_silent.out (在跑教程的时候我使用的是-out:pdb)</span><br><span class="line">        -nstruct 10</span><br></pre></td></tr></table></figure>
+
+<p>AbinitioRelax应用对长度小于100个残基的小单体蛋白质表现最好(文献5指出小蛋白域&lt;85  残基的高分辨率结构预测(&lt;1.5埃))。它可以对某些蛋白质进行准确的预测，但对于一些长度在150个残基左右的蛋白质，由于构象空间大大增加，较大的蛋白质需要更多的计算量。为了向原生结构靠拢，在20,000到200,000个模型的范围内进行采样并不罕见。参考文献6 7提供了与采样问题相关的信息。</p>
+<p>如果你使用了silent参数，记得用score把结果提出出来</p>
+<p>为了验证预测的正确性，你可以绘制出前5%或10%的模型的得分与rmsd。Total_score和rmsd都在sorce文件中提供了。只有在知道天然结构的情况下，这才是可能的。在现实世界的情况下，可以使用同源蛋白。然而，如果不知道相关结构，你可以使用最低能量的模型（并用例如-native best_E.pdb重新打分）。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Science在创刊125周年时提出了一系列问题，“对于一个给定的序列能否准确预测蛋白质折叠”就是其中一个，这被视为结构生物信息学皇冠上的明珠。目前而言，有两种从序列到结构的预测方法，de novo 和 comparative or homology modeling本文从一些基本概念出发，简略介绍了RosettaCM相关知识以及Ab initio structure prediction的算法，用法。<br>随着计算机算力的发展以及人工神经网络的加入，游戏规则也已经被改变。与传统的fragments方法不同，使用深度学习不需要大量的随机采样，就可以直接得到高质量的蛋白折叠结构，无疑展示出深度学习的强大功能。<br>而当下，随着技术的进步。蛋白质的设计者们不再从自然界已经存在的蛋白质中构建新的蛋白质，而是可以努力精确地制造出新的分子来解决特定的问题–就像现代科技在生物学领域之外所做的那样。<br>相信这个问题终有一天会被攻破！</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Computional-biogloy/" rel="tag"># Computional biogloy</a>
+          
+            <a href="/tags/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0/" rel="tag"># 小白生信笔记</a>
+          
+            <a href="/tags/Protein-structure-prediction/" rel="tag"># Protein structure prediction</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/08/04/%E5%90%88%E6%88%90%E7%94%9F%E7%89%A9%E5%AD%A6:%E4%B8%80%E4%B8%AA%E6%96%B0%E5%85%B4%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%AD%A6%E7%A7%91/" rel="next" title="合成生物学:一个新兴的工程学科">
+                <i class="fa fa-chevron-left"></i> 合成生物学:一个新兴的工程学科
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.png"
+               alt="Yangzichen" />
+          <p class="site-author-name" itemprop="name">Yangzichen</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/RazzyChen" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                    
+                      GitHub
+                    
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.zhihu.com/people/yang-zi-chen-37" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                    
+                      知乎
+                    
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一切的开始"><span class="nav-number">1.</span> <span class="nav-text">一切的开始</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本概念"><span class="nav-number">2.</span> <span class="nav-text">基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Fullatom-amp-Centroid"><span class="nav-number">2.1.</span> <span class="nav-text">Fullatom &amp; Centroid</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AtomTree-amp-FoldTree-amp-DomainMap"><span class="nav-number">2.2.</span> <span class="nav-text">AtomTree &amp; FoldTree &amp; DomainMap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Score-function"><span class="nav-number">2.3.</span> <span class="nav-text">Score function</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Homology-modeling"><span class="nav-number">3.</span> <span class="nav-text">Homology modeling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ab-initio-structure-prediction"><span class="nav-number">4.</span> <span class="nav-text">Ab initio structure prediction</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#算法实现"><span class="nav-number">4.1.</span> <span class="nav-text">算法实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#输入文件"><span class="nav-number">4.2.</span> <span class="nav-text">输入文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Options"><span class="nav-number">4.3.</span> <span class="nav-text">Options</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Yangzichen</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
