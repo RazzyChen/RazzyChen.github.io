@@ -97,23 +97,23 @@
 <meta name="description" content="在过去十年中，从氨基酸序列去预测蛋白质的三维结构一直是计算生物学中的一个巨大的挑战。现在一个相反的问题出现了，我们可不可以设计一段特定的序列使之能折叠成一种确定的三维结构并使这个人工蛋白在生物工程和医学等领域中发挥出它生理活性呢？这个问题随着时间的流逝渐渐地在理性设计领域成为了一个备受瞩目的全新方向——De Novo Protein Design。在过去十年中，对于蛋白质结构预测以及蛋白设计这个领">
 <meta property="og:type" content="article">
 <meta property="og:title" content="综述:蛋白质结构预测与设计的进展">
-<meta property="og:url" content="https://razzychen.github.io/2020/11/02/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/index.html">
+<meta property="og:url" content="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/index.html">
 <meta property="og:site_name" content="Zichen Yang&#39;s Blog">
 <meta property="og:description" content="在过去十年中，从氨基酸序列去预测蛋白质的三维结构一直是计算生物学中的一个巨大的挑战。现在一个相反的问题出现了，我们可不可以设计一段特定的序列使之能折叠成一种确定的三维结构并使这个人工蛋白在生物工程和医学等领域中发挥出它生理活性呢？这个问题随着时间的流逝渐渐地在理性设计领域成为了一个备受瞩目的全新方向——De Novo Protein Design。在过去十年中，对于蛋白质结构预测以及蛋白设计这个领">
-<meta property="og:image" content="https://razzychen.github.io/2020/11/02/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/box1.png">
-<meta property="og:image" content="https://razzychen.github.io/2020/11/02/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape1.png">
-<meta property="og:image" content="https://razzychen.github.io/2020/11/02/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape.png">
-<meta property="og:image" content="https://razzychen.github.io/2020/11/02/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/timeline.png">
-<meta property="og:image" content="https://razzychen.github.io/2020/11/02/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/acknowledge.jpeg">
-<meta property="article:published_time" content="2020-11-02T12:18:19.000Z">
-<meta property="article:modified_time" content="2020-11-11T13:16:41.638Z">
+<meta property="og:image" content="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/box1.png">
+<meta property="og:image" content="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape1.png">
+<meta property="og:image" content="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape.png">
+<meta property="og:image" content="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/timeline.png">
+<meta property="og:image" content="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/acknowledge.jpeg">
+<meta property="article:published_time" content="2020-11-12T11:30:00.000Z">
+<meta property="article:modified_time" content="2020-11-11T13:20:12.210Z">
 <meta property="article:author" content="Yangzichen">
 <meta property="article:tag" content="Computional biology">
 <meta property="article:tag" content="小白生信笔记">
 <meta property="article:tag" content="Protein structure prediction">
 <meta property="article:tag" content="Protein design">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://razzychen.github.io/2020/11/02/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/box1.png">
+<meta name="twitter:image" content="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/box1.png">
 
 
 
@@ -142,7 +142,7 @@
 
 
 
-  <link rel="canonical" href="https://razzychen.github.io/2020/11/02/综述-蛋白质结构预测与设计的进展/"/>
+  <link rel="canonical" href="https://razzychen.github.io/2020/11/12/综述-蛋白质结构预测与设计的进展/"/>
 
 
 
@@ -281,7 +281,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://razzychen.github.io/2020/11/02/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/">
+    <link itemprop="mainEntityOfPage" href="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Yangzichen">
@@ -310,8 +310,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-11-02T20:18:19+08:00">
-                2020-11-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-11-12T19:30:00+08:00">
+                2020-11-12
               </time>
             
 
@@ -377,9 +377,9 @@
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>天然进化的蛋白质具有惊人的分子功能多样性，这是由于它们的精妙的三维结构的细微不同所产生的，而三维结构又由其遗传信息所编码的的氨基酸序列决定。因此，对氨基酸序列与蛋白质结构之间关系的预测性理解将开辟新的途径，既可以从基因组序列数据中预测功能，也可以通过设计具有特定结构的氨基酸序列，来合理地设计新型蛋白质功能。在过去的十年里，我们预测和设计蛋白质三维结构的能力有了极大的提高，使我们对医学和生物学的理解又加深了很多。已经开发出了新的机器学习算法，可以分析蛋白质家族中相关突变的模式，从而仅从序列信息中预测结构上相互作用的残基。使用改进的蛋白质能量函数<a href="#Footnote"><sup>i</sup></a>首次计算就可能从一个近似的结构预测模型开始，并通过能量引导的优化过程使其更接近实验确定的结构。<br>蛋白质构象采样和序列优化方面的进展使得新型蛋白质结构和复合物的设计成为可能，其中一些结构和复合物显示出作为药物的前景。这些进展在蛋白质结构预测和设计已经推动了技术突破以及生物数据库的快速增长。<br>蛋白质建模算法(<a href="#pic">见下图所显示</a>）的开发和应用都需要庞大的计算能力。研究人员可用的算力（包括基于CPU的算力以及越来越多的基于GPU的算力）的快速增长促进了新算法的快速测试，并使其能够应用于更大的分子和分子组合。同时，随着基因组和宏基因组测序工作的扩大，下一代测序促进了蛋白质序列数据库的急剧膨胀。软件和自动化方面的进步提高了实验结构测定的速度，加快了由实验所测定的蛋白质结构数据库（Protein Data Bank，PDB）的增长，目前该数据库包含了近15万个大分子结构。同时深度学习算法使图像处理和语音识别发生了革命性的变化，这些序列以及结构的庞大数据量为深度学习提供了巨量的可用样本。<br>在这篇综述中，我们重点介绍了这些技术进步所带来的一些最新突破。我们简述了当前预测和设计蛋白质结构的方法，主要侧重于不需要实验确定的结构作为模板的无模板方法。我们将讨论这些建模方法的优点和缺点，以及它们目前和潜在的应用。最后，我们将评论这些发展对生物学和医学领域的更广泛的实际影响。<br>蛋白质构象的energy landscape<a href="#Footnote"><sup>v</sup></a>是高维的复杂表面，有许多局部最小值。为了快速定位低能量位置的结构需要有效的采样方法和准确的能量函数。在基于梯度的优化方法（<a href="#pic">见图</a>，左上角），能量函数的导数与结构的自由度（如原子坐标或骨架扭转角）计算，以便在能量下降最快的方向进行。多年的经验证明基于梯度的优化是有效的，但结构会被困在能量的局部最小值的。<br>而蒙特卡罗采样方法采用随机选择的构象移动和“上坡”的步骤，以逃避局部最小值（<a href="#pic">见图</a>）。在一种叫做Metropolis Mento Carlo的算法中中，采样移动根据能量的变化被接受（绿色箭头）或拒绝（红色箭头）。而上坡运动(虚线箭头)则以概率P接受，该概率P作为能量变化的函数呈指数级递减。用于蒙特卡罗模拟的运动集的例子包括片段替换运动，其中当前构型中的连续骨架段被片段库中的替代构型所替换，以及侧链轮换。一个流行的替代蒙特卡罗取样的方法是分子动力学模拟（即MD,<a href="#pic">见图</a>，右上角），其中构象取样是由牛顿运动定律应用于分子系统的势能函数即分子力场所决定的。给定一组起始的原子位置和速度，通过取势能的梯度来计算作用在每个原子上的力，并由牛顿第二定律（F=ma）得出结果的加速度。在时间尺度上向前迈出很小的一步(通常是几个飞秒的量级)，然后在此基础上计算新的位置和速度，可这样看来我们关心问题实际是肽链折叠时能量面的采样，研究的主要目的是为了建构出蛋白质折叠等运动过程中的一个准确的能量面，一般蛋白质折叠过程中“过渡态”（位于能垒上）和形成正确折叠的重要的“中间状态”的寻找认为是属于动力学研究的范畴。可另外一个角度来说关注的是在能量面上的“粒子”的扩散问题(周期性边界条件)，暂且按下不表<a href="#Footnote"><sup>ii</sup></a>。<br>时间步长与原子旧的位置、速度和加速度的大小。在准确的能量函数和足够小的时间步长的情况下MD可以提供对能量面的广泛采样，同时也提供了单个分子如何随时间演化的真实情况。不过基于MD的建模方法所面临的挑战是，必须进行数百万到数万亿个时间步长的模拟才能达到与生物学相关的时间尺度，这就需要高性能的软件以及一些特殊的硬件架构（例如CUDA<a href="#Footnote"><sup>2</sup></a><sup>,</sup><a href="#References"><sup>iii</sup></a>等），在某些情况下，甚至需要超级计算机。</p>
 <div id="pic"></div>
 
-<p><img src="/2020/11/02/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/box1.png" alt="Box1.png"></p>
+<p><img src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/box1.png" alt="Box1.png"></p>
 <h1 id="蛋白质折叠驱动力"><a href="#蛋白质折叠驱动力" class="headerlink" title="蛋白质折叠驱动力"></a>蛋白质折叠驱动力</h1><p>蛋白质具有自发地精确地折叠成确定的三维结构的能力。折叠实验确定，指定蛋白质折叠构象（处在标准生理环境下）所需的信息完全包含在其氨基酸的一级序列中。根据Anfinsen假设<a href="#Footnote"><sup>iv</sup></a>，这种信息被编码在多肽的energy landscape<a href="#Footnote"><sup>v</sup></a>中，并且原生态具有最小的自由能。这一假说是一般的蛋白质结构预测方法的基础理论：将构象的采样和打分相结合，按能量进行排序并确定能量最低的状态。这种由能量所引导的方法所遇到主要问题是蛋白质的构象空间过于巨大即，假设每个氨基酸只有有限且离散的一组骨架构象，那么该蛋白质的构象空间也会随着多肽链的长度增加和成指数级地增加，并在及其短的时间内达到天文数字级别，对于这种困难人们认识到对于折叠构象的搜索必不可能是完全的随机搜索，否则蛋白质折叠所需要的时间尺度甚至可以超过宇宙寿命。蛋白质折叠必然是按照特定的途径“有目的”地折叠<a href="#Footnote"><sup>vi</sup></a>。不过landscape并不是一个光滑的平面和一个深洞(类似于高尔夫球场和球洞那样的关系)，而是一个崎岖不平的漏斗形。这些局部能量极小值可能是由于一些在全局折叠完成之前的一些次级结构。<br>人们认为蛋白质折叠的驱动力是疏水作用。折叠与构象熵的损失相对，构象熵的损失伴随着柔性多肽链塌陷成确定的3D构象。蛋白质中非极性侧链的紧密堆积增强了范德华力的相互作用，并消除了在熵方面不利的空腔（图1b）。此外，这种拼图游戏般的包装方式是在满足强烈的主干和侧链扭转偏好的同时实现的，这些偏好限制了观察到的扭转角分布（图1b的下部），有效地降低了侧链柔韧性到离散组的附近。在每个位置旋转。蛋白质内的氢键和盐桥在很大程度上补偿了与水相互作用的损失，因为极性基团在折叠过程中被掩埋，因此这些相互作用对天然状态的稳定性的贡献小于对天然状态的特异性的贡献（也就是说，它们有助于区分天然状态）。其他紧凑状态的原始状态）。尽管可以从低分辨率结构模型中检测到疏水性掩埋和主链氢键结合，但紧密的核堆积以及不存在区分天然状态的掩埋的，不满意的极性基团，都需要对侧链自由度进行显式建模。结果，用于结构预测和设计的分子建模方法通常采用多个级别的分辨率：使用具有计算效率的粗粒度能量函数执行大规模构象采样，该函数捕获疏水埋葬，形成二级结构并避免原子重叠;最终的蛋白质模型选择和完善需要使用更耗时的高分辨率原子能函数对氨基酸侧链进行显式建模（图1c）。</p>
-<p><img src="/2020/11/02/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape1.png" alt="landscape"><br>这张图是蛋白质折叠景观和能量的示意图<br>a 是简化的、二维的高尔夫球场和漏斗形energey landscape表示。要找到左侧的全局能量最小值(N)需要进行详尽的探索，而对于右图来说从大多数起点开始进行简单的梯度下降就可以找到全局最小值。<br>b 区分是否为蛋白质原生折叠状态的能量特征包括： 1: 疏水作用（这里显示的是小蛋白泛素的剖视图），非极性侧链埋藏在蛋白核心骨架和侧链氢键中（氢键显示为点状绿线）。紧密的侧链包装(在蛋白质核心的切片中可见)和受限的骨架和侧链扭转角分布(从氨基酸异亮氨酸的骨架-phi角与psi角-侧链chil角与chi2角-扭转角的高度集中的二维概率分布中可以看出)。<br>c 蛋白质能量学的计算模型提供了速度和精度之间的权衡。Centroid模型是计算效率和有效地平滑的能量景观，允许大规模的采样，但也引入了不准确的最小值（例如，蓝色盆地左侧的局部最小值在这部分，用箭头突出显示）。Fullatom能量函数更准确，但评估速度也更慢，对结构细节也很敏感，这就给landscape引入了崎岖不平的局部极小值，使其更难有效地到达全局最小值。</p>
+<p><img src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape1.png" alt="landscape"><br>这张图是蛋白质折叠景观和能量的示意图<br>a 是简化的、二维的高尔夫球场和漏斗形energey landscape表示。要找到左侧的全局能量最小值(N)需要进行详尽的探索，而对于右图来说从大多数起点开始进行简单的梯度下降就可以找到全局最小值。<br>b 区分是否为蛋白质原生折叠状态的能量特征包括： 1: 疏水作用（这里显示的是小蛋白泛素的剖视图），非极性侧链埋藏在蛋白核心骨架和侧链氢键中（氢键显示为点状绿线）。紧密的侧链包装(在蛋白质核心的切片中可见)和受限的骨架和侧链扭转角分布(从氨基酸异亮氨酸的骨架-phi角与psi角-侧链chil角与chi2角-扭转角的高度集中的二维概率分布中可以看出)。<br>c 蛋白质能量学的计算模型提供了速度和精度之间的权衡。Centroid模型是计算效率和有效地平滑的能量景观，允许大规模的采样，但也引入了不准确的最小值（例如，蓝色盆地左侧的局部最小值在这部分，用箭头突出显示）。Fullatom能量函数更准确，但评估速度也更慢，对结构细节也很敏感，这就给landscape引入了崎岖不平的局部极小值，使其更难有效地到达全局最小值。</p>
 <h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><div id="Footnote"></div>
 
 <p>I. Protein energy functions：即蛋白质能量函数，也被称为打分函数。对应于确定蛋白质结构和相互作用的分子力数学模型的功能。 能量函数的选择定义了从结构到能量值的映射，它可以指导结构预测和设计模拟。典型的蛋白质能量函数是多个项的线性组合，每个项都描述了不同的能量贡献（范德华相互作用，静电，去溶剂化）。在Fullatom模式下，Rosetta最新的打分函数REF15的打分项目可参考这两个连接<a href="#References"><sup>5,6</sup></a>。</p>
@@ -387,7 +387,7 @@
 <p>iii. 这里并不仅仅指CUDA Tool Kit还有作为硬件的CUDA，即CUDA Core。</p>
 <p>iv. 这个假设指出了对于处在标准生理环境下的球蛋白而言没，其原生结构仅由该蛋白质的一级序列决定，并且该蛋白质的的原生结构是一个独特的、稳定的、动力学上可获得的。</p>
 <p>v. 下文会解释什么是energy landscape,这词的中文翻译我都不太满意= =</p>
-<p>vi. 那landscape为什么不是像下图所示的红色曲线，而是蓝色的呢？<a href="#References"><sup>7</sup></a><br><img src="/2020/11/02/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape.png" alt="蛋白质的Funneled landscape和Glass like landscape的对比图"><br>我个人的看法是这样的：从进化的角度因为红色曲线对应的蛋白质没有一个占主要位置的全局能量最小值，因此很难折叠到一个非常稳定的状态，从而难以实现相对应的生物学功能，最终这样的蛋白质就会被自然淘汰，剩下的蛋白基本上都是蓝色曲线所对应的。</p>
+<p>vi. 那landscape为什么不是像下图所示的红色曲线，而是蓝色的呢？<a href="#References"><sup>7</sup></a><br><img src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape.png" alt="蛋白质的Funneled landscape和Glass like landscape的对比图"><br>我个人的看法是这样的：从进化的角度因为红色曲线对应的蛋白质没有一个占主要位置的全局能量最小值，因此很难折叠到一个非常稳定的状态，从而难以实现相对应的生物学功能，最终这样的蛋白质就会被自然淘汰，剩下的蛋白基本上都是蓝色曲线所对应的。</p>
 <h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><div id="References"></div>
 
 <ol>
@@ -401,7 +401,7 @@
 </ol>
 <h1 id="后记-amp-致谢"><a href="#后记-amp-致谢" class="headerlink" title="后记 &amp; 致谢"></a>后记 &amp; 致谢</h1><div id="Afterword"></div>
 
-<p>实际上这篇文章是一个早有预谋且逐步实施的过程:<br><img src="/2020/11/02/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/timeline.png" alt="timeline"><br>最开始我自诩认为自己对这个领域还算是小有了解，可看到目前为止暴露出很多很多问题：在看Protein-folding forces这部分的时候相关的entropy、energy令我痛苦万分，真的就是自闭。(如果有哪位前辈知道定量描述蛋白质折叠这方面的教材或者文章欢迎随时call我)<br>早些时候旁听了Becca姐关于Contrastive Learning的组会报告。“哇太强了，原来这就是博士生组会报告么”随后朋友圈里就刷到了某二十代巨佬的NC文章，临近开学又看到了Computational design of transmembrane pores这篇文章顿时开始怀疑人生。在此期间非常感谢Rui姐、杨晈学长、志宇学姐以及各位老师的鼓励。<br><img src="/2020/11/02/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/acknowledge.jpeg" alt="acknowledge"></p>
+<p>实际上这篇文章是一个早有预谋且逐步实施的过程:<br><img src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/timeline.png" alt="timeline"><br>最开始我自诩认为自己对这个领域还算是小有了解，可看到目前为止暴露出很多很多问题：在看Protein-folding forces这部分的时候相关的entropy、energy令我痛苦万分，真的就是自闭。(如果有哪位前辈知道定量描述蛋白质折叠这方面的教材或者文章欢迎随时call我)<br>早些时候旁听了Becca姐关于Contrastive Learning的组会报告。“哇太强了，原来这就是博士生组会报告么”随后朋友圈里就刷到了某二十代巨佬的NC文章，临近开学又看到了Computational design of transmembrane pores这篇文章顿时开始怀疑人生。在此期间非常感谢Rui姐、杨晈学长、志宇学姐以及各位老师的鼓励。<br><img src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/acknowledge.jpeg" alt="acknowledge"><br>路漫漫其修远兮，吾将上下而求索。新的一年请各位多指教。</p>
 
       
     </div>
