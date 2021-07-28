@@ -100,6 +100,7 @@
 <meta property="og:url" content="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/index.html">
 <meta property="og:site_name" content="Zichen Yang&#39;s Blog">
 <meta property="og:description" content="在过去十年中，从氨基酸序列去预测蛋白质的三维结构一直是计算生物学中的一个巨大的挑战。现在一个相反的问题出现了，我们可不可以设计一段特定的序列使之能折叠成一种确定的三维结构并使这个人工蛋白在生物工程和医学等领域中发挥出它生理活性呢？这个问题随着时间的流逝渐渐地在理性设计领域成为了一个备受瞩目的全新方向——De Novo Protein Design。在过去十年中，对于蛋白质结构预测以及蛋白设计这个领">
+<meta property="og:locale">
 <meta property="og:image" content="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/box1.png">
 <meta property="og:image" content="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape1.png">
 <meta property="og:image" content="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape.png">
@@ -120,7 +121,7 @@
 <script type="text/javascript" id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
-    root: '/',
+    root: '',
     scheme: 'Mist',
     sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
@@ -164,7 +165,9 @@
 
 
 
-<meta name="generator" content="Hexo 4.2.1"></head>
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -284,7 +287,7 @@
     <link itemprop="mainEntityOfPage" href="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Yangzichen">
+      <meta itemprop="name" content="">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.png">
     </span>
@@ -392,10 +395,10 @@
 
 <ol>
 <li>Kuhlman, B., Bradley, P. Advances in protein structure prediction and design. Nat Rev Mol Cell Biol 20, 681–697 (2019).DOI: 10.1038/s41580-019-0163-x</li>
-<li><a href="https://developer.nvidia.com/cuda-toolkit" target="_blank" rel="noopener">CUDA</a></li>
-<li><a href="https://www.zhihu.com/question/19667118/answer/15531711" target="_blank" rel="noopener">动力学模拟蛋白质的研究还存在什么问题-傅渥成</a></li>
+<li><a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-toolkit">CUDA</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/19667118/answer/15531711">动力学模拟蛋白质的研究还存在什么问题-傅渥成</a></li>
 <li>Cyrus Levinthal,Are there pathways for protein folding? J. Chim. Phys., 65 (1968) 44-45 DOI: 10.1051/jcp/1968650044</li>
-<li><a href="https://www.rosettacommons.org/docs/latest/rosetta_basics/scoring/score-types" target="_blank" rel="noopener">Rosetta Energy Term</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/docs/latest/rosetta_basics/scoring/score-types">Rosetta Energy Term</a></li>
 <li>Alford, R. F. et al. The Rosetta All-Atom Energy Function for Macromolecular Modeling and Design. J. Chem. Theory Comput. 13, 3031–3048 (2017).</li>
 <li>Whitford, P. C., Sanbonmatsu, K. Y. &amp; Onuchic, J. N. Biomolecular dynamics: order–disorder transitions and energy landscapes. Rep. Prog. Phys. 75, 076601 (2012).</li>
 </ol>
@@ -516,10 +519,10 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.png"
-               alt="Yangzichen" />
-          <p class="site-author-name" itemprop="name">Yangzichen</p>
+               alt="" />
+          <p class="site-author-name" itemprop="name"></p>
            
-              <p class="site-description motion-element" itemprop="description">Hello, I am Zichen Yang, a Undergraduate student of biotechnology and a growing protein designer.</p>
+              <p class="site-description motion-element" itemprop="description"></p>
           
         </div>
         <nav class="site-state motion-element">
@@ -608,7 +611,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#蛋白质折叠驱动力"><span class="nav-number">2.</span> <span class="nav-text">蛋白质折叠驱动力</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#注释"><span class="nav-number">3.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">4.</span> <span class="nav-text">References</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#后记-amp-致谢"><span class="nav-number">5.</span> <span class="nav-text">后记 &amp; 致谢</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%9B%8B%E7%99%BD%E8%B4%A8%E6%8A%98%E5%8F%A0%E9%A9%B1%E5%8A%A8%E5%8A%9B"><span class="nav-number">2.</span> <span class="nav-text">蛋白质折叠驱动力</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">3.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">4.</span> <span class="nav-text">References</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0-amp-%E8%87%B4%E8%B0%A2"><span class="nav-number">5.</span> <span class="nav-text">后记 &amp; 致谢</span></a></li></ol></div>
             
 
           </div>
@@ -640,12 +643,12 @@
 
 
 <div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io" target="_blank" rel="noopener">Hexo</a> 强力驱动
+  由 <a class="theme-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
   主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="noopener">
+  <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">
     NexT.Mist
   </a>
 </div>
