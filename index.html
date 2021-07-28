@@ -1,100 +1,19 @@
 <!DOCTYPE html>
 
+<html lang="zh-Hans">
 
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
+    
+    <title>Zichen Yang&#39;s Blog</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Hello, I am Zichen Yang, a Undergraduate student of biotechnology and a growing protein designer.">
+    <meta name="keywords" content="Protein design and computional biology">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     
     
-  
 
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta name="description" content="Hello, I am Zichen Yang, a Undergraduate student of biotechnology and a growing protein designer.">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="Hello, I am Zichen Yang, a Undergraduate student of biotechnology and a growing protein designer.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Zichen Yang&#39;s Blog">
 <meta property="og:url" content="https://razzychen.github.io/index.html">
@@ -104,1764 +23,649 @@
 <meta property="article:author" content="Yangzichen">
 <meta property="article:tag" content="Protein design and computional biology">
 <meta name="twitter:card" content="summary">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
+    <link rel="stylesheet" href="/css/style.css?v=1627465110759">
+    
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1627465110759">
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body class="mdui-drawer-body-left">
+    
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://i.loli.net/2021/07/28/MpirDQaI9THjgYe.png)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="Yangzichen" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="Yangzichen"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="Yangzichen">
+            <img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="Yangzichen" alt="Yangzichen">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>9</div>
+        <div><span>Tags</span>20</div>
+        <div><span>Categories</span>4</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple true" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/public/index.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+            </form>
+         
+    </div>
+</div>
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/5302330" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="https://www.zhihu.com/people/yang-zi-chen-37" target="_blank" mdui-tooltip="{content: '知乎'}" style="color: rgb(0, 132, 255);background-color: rgba(0, 132, 255, .15);">
+            <i class="nexmoefont icon-zhihu"></i>
+        </a>
+    </div>
+</div>
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Categories</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
 
 
+        
 
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '',
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '小步'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/小白生信笔记/">小白生信笔记</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/文献/">文献</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/笔记/">笔记</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/自闭日记/">自闭日记</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/CS229/" style="font-size: 10px;">CS229</a> <a href="/tags/Computional-biology/" style="font-size: 16.67px;">Computional biology</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Post-bachelor/" style="font-size: 10px;">Post-bachelor</a> <a href="/tags/Protein-design/" style="font-size: 10px;">Protein design</a> <a href="/tags/Protein-structure-prediction/" style="font-size: 13.33px;">Protein structure prediction</a> <a href="/tags/Synthetic-Biology/" style="font-size: 10px;">Synthetic Biology</a> <a href="/tags/System-biogloy/" style="font-size: 10px;">System biogloy</a> <a href="/tags/engineering-cycle/" style="font-size: 10px;">engineering cycle</a> <a href="/tags/engineering-organisms/" style="font-size: 10px;">engineering organisms</a> <a href="/tags/genetic-engineering/" style="font-size: 10px;">genetic engineering</a> <a href="/tags/modeling/" style="font-size: 10px;">modeling</a> <a href="/tags/synthetic-circuits/" style="font-size: 10px;">synthetic circuits</a> <a href="/tags/systhetic-devices/" style="font-size: 10px;">systhetic devices</a> <a href="/tags/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0/" style="font-size: 13.33px;">小白生信笔记</a> <a href="/tags/%E5%B9%B2%E5%95%A5%E5%95%A5%E4%B8%8D%E8%A1%8C-%E7%BF%BB%E8%BD%A6%E7%AC%AC%E4%B8%80%E5%90%8D/" style="font-size: 13.33px;">干啥啥不行 翻车第一名</a> <a href="/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/" style="font-size: 10px;">时间管理</a> <a href="/tags/%E7%A7%91%E7%A0%94%E6%97%A5%E8%AE%B0/" style="font-size: 13.33px;">科研日记</a> <a href="/tags/%E8%87%AA%E9%97%AD/" style="font-size: 20px;">自闭</a> <a href="/tags/%E8%AF%91%E7%A8%BF/" style="font-size: 10px;">译稿</a>
+    </div>
+    
+  </div>
+
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2021 Yangzichen
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        <br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a><script data-ad-client="ca-pub-2058306854838448" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <section class="nexmoe-posts">
+    
+    <div class="nexmoe-post">
+        <a href="/2021/07/27/%E8%BF%99%E5%91%A8%E9%83%BD%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9FJul26-30/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: NaN%;"> 
+                    <img data-src="https://i.loli.net/2021/07/28/MpirDQaI9THjgYe.png" data-sizes="auto" alt="这周都做了什么 Jul26-30" class="lazyload">
+                    <h1>这周都做了什么 Jul26-30</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2021年07月27日</a>
+            <a><i class="nexmoefont icon-areachart"></i>435 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        </div>
+
+        <article>
+            
+                <h1 id="课程安排及教材"><a href="#课程安排及教材" class="headerlink" title="课程安排及教材"></a>课程安排及教材</h1><h2 id="课程安排"><a href="#课程安排" class="headerlink" title="课程安排"></a>课程安排</h2><p>每周的课程有线性代数李永乐老师教(永乐大帝的课诶～)，彭笑刚老师的物理化学 Ken A.Dill的分子生物学，Andrew Ng的CS229以及CS230(我只写了230实际上这俩本质上再说一件事)以及文件和论著的自由阅读。<br>保证自己能度过充实欢快的每一天～<br>具体时间安排见下图所示：<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2021/07/27/%E8%BF%99%E5%91%A8%E9%83%BD%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9FJul26-30/fig1.jpeg" alt="课程安排" class="lazyload"></p>
+<h2 id="教材"><a href="#教材" class="headerlink" title="教材"></a>教材</h2><p>教材方面由于绝大多数都是Online课，课程内的PPT足够应付，不过有些特例还是要声明一下：</p>
+<ul>
+<li>永乐大帝的课完全是按照他考研复习走(宋浩的课我听过了，速度太慢不太适合)</li>
+<li>不仅是从数理角度理解线性代数，对于其数学图景采用了3Blue1Brown的<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ys411472E">Essence of linear algebra</a></li>
+<li>物理化学采用了彭笑刚老师在浙大的讲义(物理化学讲义)</li>
+<li>本周的自由阅读文章为<a target="_blank" rel="noopener" href="http://iopscience.iop.org/0034-4885/75/7/076601">Biomolecular dynamics: order–disorder transitions and energy landscapes</a>,专著为Molecular Driving Forces Statistical Thermodynamics in Biology, Chemistry, Physics, and Nanoscience Second Edition。<br>(好嘛 这假期和统计力学杠上了)</li>
+</ul>
+<h1 id="本周小结"><a href="#本周小结" class="headerlink" title="本周小结"></a>本周小结</h1><h2 id="线性代数"><a href="#线性代数" class="headerlink" title="线性代数"></a>线性代数</h2><p>由于行列式对行的性质对列也成立，所以下文只有对行如何如何</p>
+<h3 id="完全展开公式"><a href="#完全展开公式" class="headerlink" title="完全展开公式"></a>完全展开公式</h3><p>实际上这部分郭桐老师在高数二里面讲过，但是对按行展开与完全展开公式只知其然不知其所以然。我一直认为这是两种方法，只不过是殊途同归的。而这显然不是。<br>大原则是：<strong>主对角线-副对角线</strong><br>$A_{1}$$<br>$D = \begin{vmatrix} a_{1} &amp; a_{2} &amp; a_{3} \\ b_{1} &amp; b_{2} &amp; b_{3} \\ C_{1} C_{2} C_{3} \end{vmatrix} $</p>
+
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/2021/06/26/CS229-Welcome/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://i.loli.net/2021/07/28/MpirDQaI9THjgYe.png" data-sizes="auto" alt="CS229 Note-Welcome" class="lazyload">
+                    <h1>CS229 Note-Welcome</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2021年06月26日</a>
+            <a><i class="nexmoefont icon-areachart"></i>244 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        </div>
+
+        <article>
+            
+                <h1 id="本笔记的参考以及一些其它碎碎念"><a href="#本笔记的参考以及一些其它碎碎念" class="headerlink" title="本笔记的参考以及一些其它碎碎念"></a>本笔记的参考以及一些其它碎碎念</h1><p>本笔记首先参考了CS229(2018 Version)的全部Lecture，辅以Kevin P. Murphy的Probabilistic Machine Learning——An Introduction(2021 Version)和西瓜书，到后面也许会有论文？<br>基本的套路是先以以西瓜书作为预习——&gt;CS229 讲义——&gt;听讲——&gt;Probabilistic Machine Learning的对应章节—&gt;作业(有可能是西瓜书也有可能是MIT)。<br>时间安排参照2020 Fall的课程进度安排学习时间，Assignment和Project会做的。<br>Andrew Ng讲了40分钟课程要求…</p>
+<h1 id="本节大纲"><a href="#本节大纲" class="headerlink" title="本节大纲"></a>本节大纲</h1><p><img data-fancybox="gallery" data-sizes="auto" data-src="/2021/06/26/CS229-Welcome/fig1.png" alt="outline" class="lazyload"></p>
+<h1 id="Definition-of-Machine-Learning"><a href="#Definition-of-Machine-Learning" class="headerlink" title="Definition of Machine Learning"></a>Definition of Machine Learning</h1><p>机器学习的定义最开始是在1959年由Arthur Samuel提出的，其内容为：“Machine Learning is the field of study that gives the computer the ability to learn without being explicitly programmed.” 此外Tom Mitchell在1998年认为：“a computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E.”而这是绝大多数人接受的观点</p>
+
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://i.loli.net/2021/07/28/MpirDQaI9THjgYe.png" data-sizes="auto" alt="综述:蛋白质结构预测与设计的进展" class="lazyload">
+                    <h1>综述:蛋白质结构预测与设计的进展</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年11月12日</a>
+            <a><i class="nexmoefont icon-areachart"></i>3.7k 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 15 分钟</a>
+        </div>
+
+        <article>
+            
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>天然进化的蛋白质具有惊人的分子功能多样性，这是由于它们的精妙的三维结构的细微不同所产生的，而三维结构又由其遗传信息所编码的的氨基酸序列决定。因此，对氨基酸序列与蛋白质结构之间关系的预测性理解将开辟新的途径，既可以从基因组序列数据中预测功能，也可以通过设计具有特定结构的氨基酸序列，来合理地设计新型蛋白质功能。在过去的十年里，我们预测和设计蛋白质三维结构的能力有了极大的提高，使我们对医学和生物学的理解又加深了很多。已经开发出了新的机器学习算法，可以分析蛋白质家族中相关突变的模式，从而仅从序列信息中预测结构上相互作用的残基。使用改进的蛋白质能量函数<a href="#Footnote"><sup>i</sup></a>首次计算就可能从一个近似的结构预测模型开始，并通过能量引导的优化过程使其更接近实验确定的结构。<br>蛋白质构象采样和序列优化方面的进展使得新型蛋白质结构和复合物的设计成为可能，其中一些结构和复合物显示出作为药物的前景。这些进展在蛋白质结构预测和设计已经推动了技术突破以及生物数据库的快速增长。<br>蛋白质建模算法(<a href="#pic">见下图所显示</a>）的开发和应用都需要庞大的计算能力。研究人员可用的算力（包括基于CPU的算力以及越来越多的基于GPU的算力）的快速增长促进了新算法的快速测试，并使其能够应用于更大的分子和分子组合。同时，随着基因组和宏基因组测序工作的扩大，下一代测序促进了蛋白质序列数据库的急剧膨胀。软件和自动化方面的进步提高了实验结构测定的速度，加快了由实验所测定的蛋白质结构数据库（Protein Data Bank，PDB）的增长，目前该数据库包含了近15万个大分子结构。同时深度学习算法使图像处理和语音识别发生了革命性的变化，这些序列以及结构的庞大数据量为深度学习提供了巨量的可用样本。<br>在这篇综述中，我们重点介绍了这些技术进步所带来的一些最新突破。我们简述了当前预测和设计蛋白质结构的方法，主要侧重于不需要实验确定的结构作为模板的无模板方法。我们将讨论这些建模方法的优点和缺点，以及它们目前和潜在的应用。最后，我们将评论这些发展对生物学和医学领域的更广泛的实际影响。<br>蛋白质构象的energy landscape<a href="#Footnote"><sup>v</sup></a>是高维的复杂表面，有许多局部最小值。为了快速定位低能量位置的结构需要有效的采样方法和准确的能量函数。在基于梯度的优化方法（<a href="#pic">见图</a>，左上角），能量函数的导数与结构的自由度（如原子坐标或骨架扭转角）计算，以便在能量下降最快的方向进行。多年的经验证明基于梯度的优化是有效的，但结构会被困在能量的局部最小值的。<br>而蒙特卡罗采样方法采用随机选择的构象移动和“上坡”的步骤，以逃避局部最小值（<a href="#pic">见图</a>）。在一种叫做Metropolis Mento Carlo的算法中中，采样移动根据能量的变化被接受（绿色箭头）或拒绝（红色箭头）。而上坡运动(虚线箭头)则以概率P接受，该概率P作为能量变化的函数呈指数级递减。用于蒙特卡罗模拟的运动集的例子包括片段替换运动，其中当前构型中的连续骨架段被片段库中的替代构型所替换，以及侧链轮换。一个流行的替代蒙特卡罗取样的方法是分子动力学模拟（即MD,<a href="#pic">见图</a>，右上角），其中构象取样是由牛顿运动定律应用于分子系统的势能函数即分子力场所决定的。给定一组起始的原子位置和速度，通过取势能的梯度来计算作用在每个原子上的力，并由牛顿第二定律（F=ma）得出结果的加速度。在时间尺度上向前迈出很小的一步(通常是几个飞秒的量级)，然后在此基础上计算新的位置和速度，可这样看来我们关心问题实际是肽链折叠时能量面的采样，研究的主要目的是为了建构出蛋白质折叠等运动过程中的一个准确的能量面，一般蛋白质折叠过程中“过渡态”（位于能垒上）和形成正确折叠的重要的“中间状态”的寻找认为是属于动力学研究的范畴。可另外一个角度来说关注的是在能量面上的“粒子”的扩散问题(周期性边界条件)，暂且按下不表<a href="#Footnote"><sup>ii</sup></a>。<br>时间步长与原子旧的位置、速度和加速度的大小。在准确的能量函数和足够小的时间步长的情况下MD可以提供对能量面的广泛采样，同时也提供了单个分子如何随时间演化的真实情况。不过基于MD的建模方法所面临的挑战是，必须进行数百万到数万亿个时间步长的模拟才能达到与生物学相关的时间尺度，这就需要高性能的软件以及一些特殊的硬件架构（例如CUDA<a href="#Footnote"><sup>2</sup></a><sup>,</sup><a href="#References"><sup>iii</sup></a>等），在某些情况下，甚至需要超级计算机。</p>
+<div id="pic"></div>
+
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/box1.png" alt="Box1.png" class="lazyload"></p>
+<h1 id="蛋白质折叠驱动力"><a href="#蛋白质折叠驱动力" class="headerlink" title="蛋白质折叠驱动力"></a>蛋白质折叠驱动力</h1><p>蛋白质具有自发地精确地折叠成确定的三维结构的能力。折叠实验确定，指定蛋白质折叠构象（处在标准生理环境下）所需的信息完全包含在其氨基酸的一级序列中。根据Anfinsen假设<a href="#Footnote"><sup>iv</sup></a>，这种信息被编码在多肽的energy landscape<a href="#Footnote"><sup>v</sup></a>中，并且原生态具有最小的自由能。这一假说是一般的蛋白质结构预测方法的基础理论：将构象的采样和打分相结合，按能量进行排序并确定能量最低的状态。这种由能量所引导的方法所遇到主要问题是蛋白质的构象空间过于巨大即，假设每个氨基酸只有有限且离散的一组骨架构象，那么该蛋白质的构象空间也会随着多肽链的长度增加和成指数级地增加，并在及其短的时间内达到天文数字级别，对于这种困难人们认识到对于折叠构象的搜索必不可能是完全的随机搜索，否则蛋白质折叠所需要的时间尺度甚至可以超过宇宙寿命。蛋白质折叠必然是按照特定的途径“有目的”地折叠<a href="#Footnote"><sup>vi</sup></a>。不过landscape并不是一个光滑的平面和一个深洞(类似于高尔夫球场和球洞那样的关系)，而是一个崎岖不平的漏斗形。这些局部能量极小值可能是由于一些在全局折叠完成之前的一些次级结构。<br>人们认为蛋白质折叠的驱动力是疏水作用。折叠与构象熵的损失相对，构象熵的损失伴随着柔性多肽链塌陷成确定的3D构象。蛋白质中非极性侧链的紧密堆积增强了范德华力的相互作用，并消除了在熵方面不利的空腔（图1b）。此外，这种拼图游戏般的包装方式是在满足强烈的主干和侧链扭转偏好的同时实现的，这些偏好限制了观察到的扭转角分布（图1b的下部），有效地降低了侧链柔韧性到离散组的附近。在每个位置旋转。蛋白质内的氢键和盐桥在很大程度上补偿了与水相互作用的损失，因为极性基团在折叠过程中被掩埋，因此这些相互作用对天然状态的稳定性的贡献小于对天然状态的特异性的贡献（也就是说，它们有助于区分天然状态）。其他紧凑状态的原始状态）。尽管可以从低分辨率结构模型中检测到疏水性掩埋和主链氢键结合，但紧密的核堆积以及不存在区分天然状态的掩埋的，不满意的极性基团，都需要对侧链自由度进行显式建模。结果，用于结构预测和设计的分子建模方法通常采用多个级别的分辨率：使用具有计算效率的粗粒度能量函数执行大规模构象采样，该函数捕获疏水埋葬，形成二级结构并避免原子重叠;最终的蛋白质模型选择和完善需要使用更耗时的高分辨率原子能函数对氨基酸侧链进行显式建模（图1c）。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape1.png" alt="landscape" class="lazyload"><br>这张图是蛋白质折叠景观和能量的示意图<br>a 是简化的、二维的高尔夫球场和漏斗形energey landscape表示。要找到左侧的全局能量最小值(N)需要进行详尽的探索，而对于右图来说从大多数起点开始进行简单的梯度下降就可以找到全局最小值。<br>b 区分是否为蛋白质原生折叠状态的能量特征包括： 1: 疏水作用（这里显示的是小蛋白泛素的剖视图），非极性侧链埋藏在蛋白核心骨架和侧链氢键中（氢键显示为点状绿线）。紧密的侧链包装(在蛋白质核心的切片中可见)和受限的骨架和侧链扭转角分布(从氨基酸异亮氨酸的骨架-phi角与psi角-侧链chil角与chi2角-扭转角的高度集中的二维概率分布中可以看出)。<br>c 蛋白质能量学的计算模型提供了速度和精度之间的权衡。Centroid模型是计算效率和有效地平滑的能量景观，允许大规模的采样，但也引入了不准确的最小值（例如，蓝色盆地左侧的局部最小值在这部分，用箭头突出显示）。Fullatom能量函数更准确，但评估速度也更慢，对结构细节也很敏感，这就给landscape引入了崎岖不平的局部极小值，使其更难有效地到达全局最小值。</p>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><div id="Footnote"></div>
+
+<p>I. Protein energy functions：即蛋白质能量函数，也被称为打分函数。对应于确定蛋白质结构和相互作用的分子力数学模型的功能。 能量函数的选择定义了从结构到能量值的映射，它可以指导结构预测和设计模拟。典型的蛋白质能量函数是多个项的线性组合，每个项都描述了不同的能量贡献（范德华相互作用，静电，去溶剂化）。在Fullatom模式下，Rosetta最新的打分函数REF15的打分项目可参考这两个连接<a href="#References"><sup>5,6</sup></a>。</p>
+<p>ii. 这里参考了一下知乎用户傅渥成的回答。</p>
+<p>iii. 这里并不仅仅指CUDA Tool Kit还有作为硬件的CUDA，即CUDA Core。</p>
+<p>iv. 这个假设指出了对于处在标准生理环境下的球蛋白而言没，其原生结构仅由该蛋白质的一级序列决定，并且该蛋白质的的原生结构是一个独特的、稳定的、动力学上可获得的。</p>
+<p>v. 下文会解释什么是energy landscape,这词的中文翻译我都不太满意= =</p>
+<p>vi. 那landscape为什么不是像下图所示的红色曲线，而是蓝色的呢？<a href="#References"><sup>7</sup></a><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape.png" alt="蛋白质的Funneled landscape和Glass like landscape的对比图" class="lazyload"><br>我个人的看法是这样的：从进化的角度因为红色曲线对应的蛋白质没有一个占主要位置的全局能量最小值，因此很难折叠到一个非常稳定的状态，从而难以实现相对应的生物学功能，最终这样的蛋白质就会被自然淘汰，剩下的蛋白基本上都是蓝色曲线所对应的。</p>
+<h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><div id="References"></div>
+
+<ol>
+<li>Kuhlman, B., Bradley, P. Advances in protein structure prediction and design. Nat Rev Mol Cell Biol 20, 681–697 (2019).DOI: 10.1038/s41580-019-0163-x</li>
+<li><a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-toolkit">CUDA</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/19667118/answer/15531711">动力学模拟蛋白质的研究还存在什么问题-傅渥成</a></li>
+<li>Cyrus Levinthal,Are there pathways for protein folding? J. Chim. Phys., 65 (1968) 44-45 DOI: 10.1051/jcp/1968650044</li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/docs/latest/rosetta_basics/scoring/score-types">Rosetta Energy Term</a></li>
+<li>Alford, R. F. et al. The Rosetta All-Atom Energy Function for Macromolecular Modeling and Design. J. Chem. Theory Comput. 13, 3031–3048 (2017).</li>
+<li>Whitford, P. C., Sanbonmatsu, K. Y. &amp; Onuchic, J. N. Biomolecular dynamics: order–disorder transitions and energy landscapes. Rep. Prog. Phys. 75, 076601 (2012).</li>
+</ol>
+<h1 id="后记-amp-致谢"><a href="#后记-amp-致谢" class="headerlink" title="后记 &amp; 致谢"></a>后记 &amp; 致谢</h1><div id="Afterword"></div>
+
+<p>实际上这篇文章是一个早有预谋且逐步实施的过程:<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/timeline.png" alt="timeline" class="lazyload"><br>最开始我自诩认为自己对这个领域还算是小有了解，可看到目前为止暴露出很多很多问题：在看Protein-folding forces这部分的时候相关的entropy、energy令我痛苦万分，真的就是自闭。(如果有哪位前辈知道定量描述蛋白质折叠这方面的教材或者文章欢迎随时call我)<br>早些时候旁听了Becca姐关于Contrastive Learning的组会报告。“哇太强了，原来这就是博士生组会报告么”随后朋友圈里就刷到了某二十代巨佬的NC文章，临近开学又看到了Computational design of transmembrane pores这篇文章顿时开始怀疑人生。在此期间非常感谢Rui姐、杨晈学长、志宇学姐以及各位老师的鼓励。<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/acknowledge.jpeg" alt="acknowledge" class="lazyload"><br>路漫漫其修远兮，吾将上下而求索。新的一年请各位多指教。</p>
+
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/2020/10/29/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E9%83%BD%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86%EF%BC%9F/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://i.loli.net/2021/07/28/MpirDQaI9THjgYe.png" data-sizes="auto" alt="为什么我的时间总是不够用？" class="lazyload">
+                    <h1>为什么我的时间总是不够用？</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年10月29日</a>
+            <a><i class="nexmoefont icon-areachart"></i>458 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        </div>
+
+        <article>
+            
+                <hr>
+<p>小朋友你是不是有很多问号？为什么一天没做什么事就又睡觉了呢？为什么到睡前还有很多事情没做？为什么一天24小时不够用呢？<br>本文意在分析Oct 29这一天的行程找出一个答案：）<br>我会如实记录今天都做了什么耗时多长时间，并在文章结尾做系统分析，力求找出时间是在哪里被浪费的。</p>
+<p>从28日继承的任务如下：</p>
+<p>Review</p>
+<ul>
+<li>Methods for the directed evolution of proteins</li>
+<li>Principles of genetic circuit design</li>
+<li>A brief history of synthetic biologly</li>
+</ul>
+<p>Research</p>
+<ul>
+<li>Dock(对不上呀！！！！)</li>
+</ul>
+<p>HomeWork</p>
+<h2 id="双水相萃取的报告-说不好会留到明天"><a href="#双水相萃取的报告-说不好会留到明天" class="headerlink" title="- 双水相萃取的报告(说不好会留到明天)"></a>- 双水相萃取的报告(说不好会留到明天)</h2><p>今天的日程表如下<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/10/29/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E9%83%BD%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86%EF%BC%9F/timeline.png" alt="上午下午部分" class="lazyload"><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/10/29/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E9%83%BD%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86%EF%BC%9F/timeline2.png" alt="晚上" class="lazyload"></p>
+<h2 id="今天一共做了31件事除去睡觉的近似七小时平均每小时将近做完两件事，嗯…好像除了赖床，好像一天基本没什么时间可以压缩。今日看文献的总时长为45分钟，Assignment占比很大，以后应尽量压缩Assignment所占用的时间，去抄实验报告的所需要的器材步骤什么的。由于今天突发事件所以大多数下午的时间都被浪费，没有用于实验和看文献。看似很匆忙可实际上并没有把时间都用到自己身上。就…很浮躁，感觉没有整块的时间去静下心来看文献-尤其是Review更需要整块的时间静下心来看-和分析计算软件输出的Error-Report，没有认真地思考Error-Report背后所代表的打分函数、算法实现、生物学意义等等等等。"><a href="#今天一共做了31件事除去睡觉的近似七小时平均每小时将近做完两件事，嗯…好像除了赖床，好像一天基本没什么时间可以压缩。今日看文献的总时长为45分钟，Assignment占比很大，以后应尽量压缩Assignment所占用的时间，去抄实验报告的所需要的器材步骤什么的。由于今天突发事件所以大多数下午的时间都被浪费，没有用于实验和看文献。看似很匆忙可实际上并没有把时间都用到自己身上。就…很浮躁，感觉没有整块的时间去静下心来看文献-尤其是Review更需要整块的时间静下心来看-和分析计算软件输出的Error-Report，没有认真地思考Error-Report背后所代表的打分函数、算法实现、生物学意义等等等等。" class="headerlink" title="今天一共做了31件事除去睡觉的近似七小时平均每小时将近做完两件事，嗯…好像除了赖床，好像一天基本没什么时间可以压缩。今日看文献的总时长为45分钟，Assignment占比很大，以后应尽量压缩Assignment所占用的时间，去抄实验报告的所需要的器材步骤什么的。由于今天突发事件所以大多数下午的时间都被浪费，没有用于实验和看文献。看似很匆忙可实际上并没有把时间都用到自己身上。就…很浮躁，感觉没有整块的时间去静下心来看文献(尤其是Review更需要整块的时间静下心来看)和分析计算软件输出的Error Report，没有认真地思考Error Report背后所代表的打分函数、算法实现、生物学意义等等等等。"></a>今天一共做了31件事除去睡觉的近似七小时平均每小时将近做完两件事，嗯…好像除了赖床，好像一天基本没什么时间可以压缩。今日看文献的总时长为45分钟，Assignment占比很大，以后应尽量压缩Assignment所占用的时间，去抄实验报告的所需要的器材步骤什么的。由于今天突发事件所以大多数下午的时间都被浪费，没有用于实验和看文献。看似很匆忙可实际上并没有把时间都用到自己身上。就…很浮躁，感觉没有整块的时间去静下心来看文献(尤其是Review更需要整块的时间静下心来看)和分析计算软件输出的Error Report，没有认真地思考Error Report背后所代表的打分函数、算法实现、生物学意义等等等等。</h2><p>呃…对于时间-任务的优化目前姑且有个想法打个草稿先，分片调度(类似于操作系统中多任务的实现)</p>
+
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/2020/10/19/19%E6%97%A5%E7%BF%BB%E8%BD%A6%E5%88%86%E6%9E%90/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://i.loli.net/2021/07/28/MpirDQaI9THjgYe.png" data-sizes="auto" alt="19日实验翻车分析" class="lazyload">
+                    <h1>19日实验翻车分析</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年10月19日</a>
+            <a><i class="nexmoefont icon-areachart"></i>1.1k 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 5 分钟</a>
+        </div>
+
+        <article>
+            
+                <h1 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h1><p>今天对上周的RosettaCM结果使用SAVES做了分析，结果显示建模结果良好但做到Docking时发现活性中心附近的空间位阻巨大，疑似Hybridize Mover写的有问题。</p>
+<h1 id="结构分析"><a href="#结构分析" class="headerlink" title="结构分析"></a>结构分析</h1><p><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/10/19/19%E6%97%A5%E7%BF%BB%E8%BD%A6%E5%88%86%E6%9E%90/verify.png" alt="verify3d" class="lazyload"><br>Verify图先放这里，重头戏是下面两个程序的分析。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/10/19/19%E6%97%A5%E7%BF%BB%E8%BD%A6%E5%88%86%E6%9E%90/ERRAR.png" alt="ERRAR" class="lazyload"><br>用ERRAT程序分析模型的立体化学合理性,检査结构中可能存在的错误,结果如上图所示。图中横坐标是处于由9个氨基酸残基组成的滑动窗口(9-residue sliding window)中心位置的残基编号,滑动窗口的位置随着二次误差剖析函数的计算发生动态变化;纵坐标是由误差函数计算结果定义的置信度, 由此判断结构的可信程度。图中的深灰色部分表示在95%置信水平下应该被拒绝的结构区域;而黑色部分则是在99%置信水平下应被拒绝的结构区域,这是种更为严格的分析标准。根据上图的结果,在1号被拒绝，80号位点左右结构被拒绝，590-600处结构被间断拒绝，667，668两个位点被拒绝,这可能与MSA结果不好有一定关系。另外从ERRAT程序给出的总体打分来看，结构总体打分较高。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/10/19/19%E6%97%A5%E7%BF%BB%E8%BD%A6%E5%88%86%E6%9E%90/R-Plot.png" alt="R-Plot" class="lazyload"><br>Ramachandran图的左上部分表示β-折叠区,分布在这一区域的氨基酸残基均形成β-折叠结构;左下部分为右手α-螺旋区,右上部分为不太常见的左手α-螺旋区。图中根据每一区域颜色从深到浅排列的次序依次为最佳合理区(most favored regions)、额外合理区(additional allowed regions)、一般合理区( generously allowed regions)以及不合理区( disallowed regions)。一个质量优良的结构中,大多数氨基酸残基(超过90%)应分布在最佳合理区,而只有极少残基出现在不合理区。甘氨酸由于没有侧链,允许分布在所有区域,而分布在左手-螺旋区的氨基酸残基不多,除了甘氨酸以外,比较常见的还有天冬氨酸和天冬酰胺,一般认为,它们是依靠与主链形成氢键因而能采取这种特殊的构象。从 Ramachandran图的比较中可以发现,用RosettaCM程序构建的结构中氨基酸残基的分布更加集中,有87.6%的残基分布于最佳合理区,说明这些氨基酸残基之间不存在重叠和不合理接触,而只有0.4%的残基出现在不合理区。</p>
+<h1 id="问题分析"><a href="#问题分析" class="headerlink" title="问题分析"></a>问题分析</h1><p><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/10/19/19%E6%97%A5%E7%BF%BB%E8%BD%A6%E5%88%86%E6%9E%90/10.19.png" alt="大型翻车现场" class="lazyload"></p>
+<p>啊这…图中彩色的部分所示的是A的活性位点，远离模型的活性空腔，考虑到这4个氨基酸的位置以及周围的空间位阻, Docking显然地是没戏…<br>吐槽自己Pymol的作图能力…</p>
+<p>当时的script如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ROSETTASCRIPTS</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">TASKOPERATIONS</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">TASKOPERATIONS</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">SCOREFXNS</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ScoreFunction</span> <span class="attr">name</span>=<span class="string">&quot;stage1&quot;</span> <span class="attr">weights</span>=<span class="string">&quot;score3&quot;</span> <span class="attr">symmetric</span>=<span class="string">&quot;0&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Reweight</span> <span class="attr">scoretype</span>=<span class="string">&quot;atom_pair_constraint&quot;</span> <span class="attr">weight</span>=<span class="string">&quot;0.1&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ScoreFunction</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ScoreFunction</span> <span class="attr">name</span>=<span class="string">&quot;stage2&quot;</span> <span class="attr">weights</span>=<span class="string">&quot;score4_smooth_cart&quot;</span> <span class="attr">symmetric</span>=<span class="string">&quot;0&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Reweight</span> <span class="attr">scoretype</span>=<span class="string">&quot;atom_pair_constraint&quot;</span> <span class="attr">weight</span>=<span class="string">&quot;0.1&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ScoreFunction</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">ScoreFunction</span> <span class="attr">name</span>=<span class="string">&quot;fullatom&quot;</span> <span class="attr">weights</span>=<span class="string">&quot;beta_cart&quot;</span> <span class="attr">symmetric</span>=<span class="string">&quot;0&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Reweight</span> <span class="attr">scoretype</span>=<span class="string">&quot;atom_pair_constraint&quot;</span> <span class="attr">weight</span>=<span class="string">&quot;0.1&quot;</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">ScoreFunction</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">SCOREFXNS</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">FILTERS</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">FILTERS</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">MOVERS</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Hybridize</span> <span class="attr">name</span>=<span class="string">&quot;hybridize&quot;</span> <span class="attr">stage1_scorefxn</span>=<span class="string">&quot;stage1&quot;</span> <span class="attr">stage2_scorefxn</span>=<span class="string">&quot;stage2&quot;</span> <span class="attr">fa_scorefxn</span>=<span class="string">&quot;fullatom&quot;</span> <span class="attr">batch</span>=<span class="string">&quot;1&quot;</span> <span class="attr">stage1_increase_cycles</span>=<span class="string">&quot;1.0&quot;</span> <span class="attr">stage2_increase_cycles</span>=<span class="string">&quot;1.0&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Template</span> <span class="attr">pdb</span>=<span class="string">&quot;../rosetta_cm/A_thread.pdb&quot;</span> <span class="attr">cst_file</span>=<span class="string">&quot;AUTO&quot;</span> <span class="attr">weight</span>=<span class="string">&quot;1.0&quot;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Template</span> <span class="attr">pdb</span>=<span class="string">&quot;../rosetta_cm/B_thread.pdb&quot;</span> <span class="attr">cst_file</span>=<span class="string">&quot;AUTO&quot;</span> <span class="attr">weight</span>=<span class="string">&quot;1.0&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">Hybridize</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">MOVERS</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">APPLY_TO_POSE</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">APPLY_TO_POSE</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">PROTOCOLS</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Add</span> <span class="attr">mover</span>=<span class="string">&quot;hybridize&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">PROTOCOLS</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ROSETTASCRIPTS</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>由于二者weight相同在进行Hybridize时，过多的参考了B的结构，PyMol structure align可以作为改论点的支持材料</p>
+<h1 id="修改建议"><a href="#修改建议" class="headerlink" title="修改建议"></a>修改建议</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Template</span> <span class="attr">pdb</span>=<span class="string">&quot;../rosetta_cm/A_thread.pdb&quot;</span> <span class="attr">cst_file</span>=<span class="string">&quot;AUTO&quot;</span> <span class="attr">weight</span>=<span class="string">&quot;1.0&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>改为 </p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Template</span> <span class="attr">pdb</span>=<span class="string">&quot;../rosetta_cm/A_thread.pdb&quot;</span> <span class="attr">cst_file</span>=<span class="string">&quot;AUTO&quot;</span> <span class="attr">weight</span>=<span class="string">&quot;1.3&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Template</span> <span class="attr">pdb</span>=<span class="string">&quot;../rosetta_cm/B_thread.pdb&quot;</span> <span class="attr">cst_file</span>=<span class="string">&quot;AUTO&quot;</span> <span class="attr">weight</span>=<span class="string">&quot;1.0&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+<p>B权重不变 首先对这两个模板以默认参数跑Relax 重新建模</p>
+
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/2020/08/04/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://i.loli.net/2021/07/28/MpirDQaI9THjgYe.png" data-sizes="auto" alt="小白生信笔记——蛋白质结构预测" class="lazyload">
+                    <h1>小白生信笔记——蛋白质结构预测</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年08月04日</a>
+            <a><i class="nexmoefont icon-areachart"></i>4.3k 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 18 分钟</a>
+        </div>
+
+        <article>
+            
+                <p>&lt;script type=”text/javascript” src=”<a target="_blank" rel="noopener" href="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&quot;&gt;">http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=default&quot;&quot;&gt;</a>&lt;/script&gt;<br>这篇文章参考了如下文章或网页</p>
+<ol>
+<li>Huang, P. S., Boyken, S. E. &amp; Baker, D. The coming of age of de novo protein design. Nature 537, 320–327 (2016). DOI: 10.1038/nature19946</li>
+<li>Haddad, Y., Adam, V. &amp; Heger, Z. Ten quick tips for homology modeling of high-resolution protein 3D structures. PLOS Comput. Biol. 16,  (2020).  DOI:10.1371/journal.pcbi.1007449</li>
+<li>Song, Y. et al. High-resolution comparative modeling with RosettaCM. Structure 21, 1735–1742 (2013). DOI: 10.1016/j.str.2013.08.005</li>
+<li>Leaver-Fay A, Tyka M, Lewis SM, et al. ROSETTA3: an object-oriented software suite for the simulation and design of macromolecules. Methods Enzymol. 2011;487:545‐574. DOI: 10.1016/B978-0-12-381270-4.00019-6</li>
+<li>Alford, R. F. <em>et al.</em> The Rosetta All-Atom Energy Function for Macromolecular Modeling and Design. J. Chem. Theory Comput. 13, 3031–3048 (2017). DOI: 10.1021/acs.jctc.7b00125</li>
+<li>Bradley P, Misura KM, Baker D (2005). Toward high-resolution de novo structure prediction for small proteins. Science 309, 1868-71.  DOI: 10.1126/science.1113801</li>
+<li>Kim DE, Blum B, Bradley P, Baker D (2009). Sampling bottlenecks in de novo protein structure prediction. <em>J Mol Biol</em> 393, 249-60. DOI:10.1016/j.jmb.2009.07.063)</li>
+<li>Bonneau R, Strauss CE, Rohl CA, Chivian D, Bradley P, Malmstrom L, Robertson T, Baker D. (2002) De novo prediction of three-dimensional structures for major protein families. J Mol Biol 322(1):65-78. DOI: 10.1016/S0022-2836(02)00698-8</li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/docs/latest/rosetta_basics/structural_concepts/Rosetta-overview">An introduction to important Rosetta concepts </a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/docs/latest/application_documentation/structure_prediction/RosettaCM">RosettaCM - Comparative Modeling with Rosetta</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/docs/latest/rosetta_basics/structural_concepts/centroid-vs-fullatom">Centroid and Full-atom modes</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/docs/latest/rosetta_basics/Glossary/Glossary#b">Rosetta Glossary</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/docs/latest/rosetta_basics/structural_concepts/foldtree-overview">FoldTree overview and concepts</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/docs/latest/rosetta_basics/structural_concepts/atomtree-overview">AtomTree overview and concepts</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/docs/latest/application_documentation/structure_prediction/abinitio-relax">AbinitioRelax</a> </li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/docs/latest/application_documentation/structure_prediction/abinitio">Abinitio</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rosettacommons.org/demos/latest/tutorials/denovo_structure_prediction/Denovo_structure_prediction">De novo structure prediciton</a></li>
+<li><a target="_blank" rel="noopener" href="http://how2rosetta.cn/?article=rosettacm-%e8%9b%8b%e7%99%bd%e9%ab%98%e7%b2%be%e5%ba%a6%e6%af%94%e5%af%b9%e5%bb%ba%e6%a8%a1">Rosetta中文社区 RosettaCM—蛋白高精度对比建模</a></li>
+<li><a target="_blank" rel="noopener" href="http://how2rosetta.cn/?article=trrosetta-%e5%9c%a8%e5%8f%b0%e5%bc%8f%e6%9c%ba%e4%b8%8a%e4%bb%8e%e5%a4%b4%e6%8a%98%e5%8f%a0%e4%b8%80%e4%b8%aa%e8%9b%8b%e7%99%bd">Rosetta中文社区—trRosetta</a></li>
+</ol>
+<p>作者学疏才浅，难免会有疏漏，欢迎指正，谢谢！<br>字多图少，希望你能看到最后并有所收获：）</p>
+<h2 id="一切的开始"><a href="#一切的开始" class="headerlink" title="一切的开始"></a>一切的开始</h2><p>蛋白质的三维结构的确定一直是个挑战。一个有200个氨基酸组成的蛋白质，其序列的可能性就达到了20$^{200}$,远远大于了宇宙中近似的原子总数（大约为$6 \times 10 ^{79}$）,如此庞大的数目无法通过蛮力进行运算。然而，经过多年的发展，确定一个未知蛋白的三维结构已经成为一个可操作的挑战，在许多情况下都可以进行合理并且准确的预测。</p>
+<p>基本的思路是这样的：因为要建模的分子有一定数量的自由度（Degree of freedom, DOF）比如说蛋白质折叠中的phi/psi/chi Angle，对接中的刚体旋转，Design中的氨基酸序列。再加上默认假设的其他固定参数，这些DOFs通过 “refold “和 “pack_rotamers “等过程，被转化为原子在坐标系中实际的xyz位置。用一个基于物理学的能量函数（ Score function）来评估当前原子位置下的能量状态。<br>自由度-坐标-能量 与 Monte Carlo Minimization等算法相结合，对由这些DOFs定义的构象空间进行采样，以找到具有最低能量状态的构象，根据fig 1. 蛋白质势能图的漏斗假说(Funnel hypothesis of the protein potential energy landscape)，天然蛋白质构象处于漏斗的底部，自由能最低，即全局能量最小。<br>下面我们首先会介绍一些基本的概念，之后会介绍两种结构预测的方法，homology modeling 和 Ab initio</p>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>我们要介绍的基本概念有以下几个：</p>
+<ul>
+<li>Centroid &amp;  FullAtom</li>
+<li>FoldTree &amp; AtomTree &amp; DomainMap</li>
+<li>Score Function</li>
+</ul>
+<h3 id="Fullatom-amp-Centroid"><a href="#Fullatom-amp-Centroid" class="headerlink" title="Fullatom &amp; Centroid"></a>Fullatom &amp; Centroid</h3><p>Fullatom，也被称作all atom。顾名思义，很好理解就是一个氨基酸残基中的所有原子都会被表示出来（R基也会用具体的原子表示出来）<br>在一个拥有无限时间，计算机算力无穷大的世界里，我们可以对全部的原子进行模拟。不过在现实世界中，试图包含所有R基的同时进行广泛的骨架采样是不切实际的。如果你不信邪，试图这样去做你将面临两个巨大的问题：</p>
+<ul>
+<li>计算所有原子对之间的相互作用所消耗的算力会随着原子数量的增加而迅速增长</li>
+<li>全原子构象空间是非常崎岖的</li>
+</ul>
+<p>为了绕过这两个问题，就在需要广泛采样的时候（比如Ab initio 的初始阶段）使用精简的采样模式，也就是Centroid。在该模式下每个残基的5个主链原子不会改变，所有的R基仅仅会用一个伪原子表示。</p>
+<p>一般在大规模的Centroid采样过后，会回到fullatom下进行细化使得软件可以更精准的侧链之间的相互作用以及蛋白质结构其他更细微的细节进行打分。</p>
+<h3 id="AtomTree-amp-FoldTree-amp-DomainMap"><a href="#AtomTree-amp-FoldTree-amp-DomainMap" class="headerlink" title="AtomTree &amp; FoldTree &amp; DomainMap"></a>AtomTree &amp; FoldTree &amp; DomainMap</h3><p>让我们转到 “运动学 “层，看看系统中的自由度(DOFs)是如何转化为实际的原子位置的。运动学层的两个概念分别是AtomTree和FoldTree。<br>一言以蔽之：AtomTree是一种数据结构（计算机/图论意义上的），用于跟踪和处理原子的笛卡尔坐标（xyz）和内部坐标（长度、角度、二面角），同时保持两者的同步。如果我们进一步地解释什么是AtomTree的话，我们不妨假设定义一颗树，指定某一个原子为树的树根，向外（下游）遍历系统中所有原子，生成对应的笛卡尔坐标。把系统的内坐标映射到单个原子上，每一个原子存储了相对于三个上游原子定义的参考框架的键长、键角和斜面角。那么我们假设的这棵树就是AtomTree了。</p>
+<p>为了简化指定AtomTree的过程，我们可以定义一个残基级的运动学连接树，称为FoldTree，其中节点对应单个残基而不是原子。如果已知FoldTree那么AtomTree自动被建立。</p>
+<p>为了有效地进行评分，AtomTree会跟踪上次评分函数评估后哪些DOF发生了变化。如果两个残基相互之间没有移动，那么上次评分函数评估中的一些相互作用能可以被重用。为了告知哪些残基发生了移动，AtomTree会递归遍历树并对每一个残基结构创建 “颜色”；如果两个残基没有相互移动，那么在这个遍历中它们被分配了相同的“颜色”。如果一个残基的内部自由度发生了变化，那么它就会被赋予新的“颜色”，而这就意味着它的旧能量不能在下一次的评分评估中被重用。保持着色的数据结构被称为DomainMap。</p>
+<h3 id="Score-function"><a href="#Score-function" class="headerlink" title="Score function"></a>Score function</h3><p>基于Anfinsen的假设，即天然蛋白质构象代表独特的、低能的、热力学稳定的构象。这些折叠态所代表的能量是能量图上的极小值，它们在吉布斯自由能方面有一个有利的净变化:即相对于未折叠态而言，焓（$\Delta H$）和熵（$T \Delta S$）的贡献之和。大分子建模程序所执行的是一个启发性的方法，即逐次逼近最优解的方法，所以需要一个数学函数来区分未折叠、折叠和天然构象。这个函数就是Score function。通常情况下，这些函数是能量和自由度的函数，总能量是这些函数的线性组合。<br>截止本稿发出时，Rosetta的默认Score function是Rosetta Energy Function 2015(REF15)。具体评分项权重见下图，具体算法参见参考文献5。</p>
+<p>Centroid score function相对于Fullatom score function来说虽然解释结果方面有些许欠缺，但Centroid score function有一个巨大的优势，那就是能量图谱很光滑，对非常不同的构象进行采样比较容易。</p>
+<h2 id="Homology-modeling"><a href="#Homology-modeling" class="headerlink" title="Homology modeling"></a>Homology modeling</h2><p>随着高通量测序技术的发展，人们已经确定了大量的蛋白质序列。幸运的是，我们现在已经通过Cryo-EM等方法知道了大多数蛋白质家族中至少一个代表性的结构。使用这些代表性的结构作为起点，Homology modeling（Comparative modeling）可以用来预测许多蛋白质的结构。在有已知结构且具有相当的identity时我们可以使用Homology modeling。<br>基本上Homology modeling思想是这样的：首先，将被建模的蛋白质一级序列与已知结构且具有一定同源性（一般要求identity大于25% RosettaCM可以做到15%）序列的进行多序列比对。之后，在这些信息的指导下建立三维模型。人们已经开发出许多优秀的Homology modeling软件，包括广泛使用的MODELLER、I-TASSER等WEB server。<br>如果我们细化一下工作流程，那么会得到这样一张图：<br>上游分析是多序列对比，下游是Docking、MD或者其他方法。<br>Homology modeling的算法以及步骤请参考Rosetta中文社区文章，在此不赘述。<br><a target="_blank" rel="noopener" href="http://how2rosetta.cn/?article=rosettacm-%e8%9b%8b%e7%99%bd%e9%ab%98%e7%b2%be%e5%ba%a6%e6%af%94%e5%af%b9%e5%bb%ba%e6%a8%a1">Rosetta中文社区 RosettaCM—蛋白高精度对比建模</a><br>文献2这篇文章中提到了关于Homology modeling的十个建议供你参考。</p>
+<h2 id="Ab-initio-structure-prediction"><a href="#Ab-initio-structure-prediction" class="headerlink" title="Ab initio structure prediction"></a>Ab initio structure prediction</h2><p>试图从头开始基于第一性原理(The first principles)来解决蛋白质折叠问题，即在没有同源蛋白质结构或同源度不足以支撑建模的情况下，寻找给定氨基酸序列的在构象空间中的最低能量结构（不过有一个前提，我们假设Score function的最小值所代表的构象与蛋白质自然发生折叠的结构是一致的）。在没有已知结构的同源物的情况下，要正确预测蛋白质的结构，除了最小的蛋白质外，还很难。主要的挑战是必须取样的骨架构象空间的过于庞大，而且正确的结构比所有的结构的能量低，但由于能量函数很崎岖所以正确的结构往往很难被找到。然而，如果采样过程是由额外的信息指导的，如基于共进化的距离约束等。在这种情况下，可以预测复杂蛋白质的结构。<br>下面Abinitio Relax—Rosetta框架下的从头预测蛋白质结构的程序，如果你设置好了环境变量，那么你可以在<code>$ROSETTA/main/source/src/apps/public/AbinitioRelax.cc</code> 这个路径下找到Abinitio的可执行文件，在<code>$ROSETTA/demos/public/abinitio/</code>目录中找到教程所使用的的文件。</p>
+<h3 id="算法实现"><a href="#算法实现" class="headerlink" title="算法实现"></a>算法实现</h3><p>AbinitioRelax主要包括两个步骤：</p>
+<ul>
+<li>基于经验的Centroid score function，对构象空间进行粗粒度的搜索</li>
+<li>使用基于Fullatom score function进行全原子的优化</li>
+</ul>
+<p>第二步比第一步的计算量大得多，也比较耗时。代码和演示部分中描述的例子运行在Macbook Pro(2018Mid,8265U,16G,openMPI并行)上生成一个117个残基蛋白的模型大约需要8分钟。AbinitioRelax运行可以通过命令行选项输出由用户定义的模型数量（参见下面的option部分）。为了增加构象采样，该应用程序可以通过执行多个作业，每个作业都使用一个唯一的随机数种子（option会讲），很容易并行化。由于Fullatom score function对不完美的原子相互作用非常敏感，而且在采样不足的情况下会存在更多的噪声，因此向原生结构收敛可能需要大量的采样(输出多少会有参考)。更详细的算法实现部分可以参考参考文献16</p>
+<h3 id="输入文件"><a href="#输入文件" class="headerlink" title="输入文件"></a>输入文件</h3><ul>
+<li>Fasta文件：你可以在这个<code>$ROSETTA/demos/public/abinitio/</code>里面找到它</li>
+<li>片段文件：你可以使用服务器（<a target="_blank" rel="noopener" href="http://robetta.bakerlab.org/fragmentsubmit.jsp">http://robetta.bakerlab.org/fragmentsubmit.jsp</a> ）或者在本地安装 rosetta_fragments包来获得， <code>$ROSETTA/demos/public/abinitio/</code>内有</li>
+<li>原生结构（可选）：PDB结构可用于基准测试。使用时，每个模型的RMSD与原生的RSD一同被计算出来，并作为分数中的额外一列提供。</li>
+<li>Psipred 提供的二级结构psipred_ss2预测文件（可选）：当使用 -use_filters 和 -kill_hairpins 时必须（在Rosetta3.4 - 3.5时发生了变化，Rosetta社区帖子如下<a target="_blank" rel="noopener" href="https://www.rosettacommons.org/content/killhairpin-error">here</a> )</li>
+</ul>
+<h3 id="Options"><a href="#Options" class="headerlink" title="Options"></a>Options</h3><p>这些选项没必要逐个跟在命令后，建立一个flags文件，将参数写入即可。运行的时候只需要输入<code>AbinitioRelax.mpi.macosclangrelease @flags</code>即可全部调用（我的版本是mpi并行，平台是macOS所以你的命令会和我不一样，请参考社区其他文章）。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">-in:file:native ./input_files/1elw.pdb            原生结构 (可选)</span><br><span class="line">(or -in:file:fasta ./input_files/1elwA.fasta)     蛋白质序列fasta格式 (要求原生结构没有提供)</span><br><span class="line">-in:file:frag3 ./input_files/aa1elwA03_05.200_v1_3  3残基片段 (片段文件)</span><br><span class="line">-in:file:frag9 ./input_files/aa1elwA09_05.200_v1_3  9残基片段 </span><br><span class="line">-database path/to/rosetta/main/database             Rosetta database的环                                                     境变量，编译的时候如果写                                                     过这里可以不写</span><br><span class="line">-abinitio:relax                                    是否在从头预测之后Relax default=false.</span><br><span class="line">-nstruct 1                                          输出结构数量</span><br><span class="line">-out:file:silent 1elwA_silent.out               使用silent file输                                                         出,default=default.out</span><br><span class="line">(or -out:pdb)                                       使用PDB文件输出, default=false</span><br><span class="line">-out:path /my/path                                  输出PDB文件的构象，默认是&#x27;.&#x27;</span><br></pre></td></tr></table></figure><br>有几个可选的设置，都是经过基准测试和彻底测试的最佳性能（推荐使用这些选项）。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-use_filters true                        使用回旋半径(RG)、接触顺序和                                                sheet过滤器个选项通过在过滤失                                                败时不继续进行细化来节省计算。                                                注意的是，对于某些序列，很大一                                                部分模型可能会被过滤失败。筛选                                                器是为了识别具有非蛋白特征的模                                                型。过滤器失败的模型的名称以F_                                                开头。 </span><br><span class="line">-psipred_ss2 ./input_files/1elwA.psipred_ss2   使用psipred预测的二级结构数据                                                （要求使用-use_filters）</span><br><span class="line">-abinitio::increase_cycles 10                 Abinitio每个阶段的循环次数将按                                               这个为系数增加</span><br><span class="line">-abinitio::rg_reweight 0.5                    回旋半径(RG)的权重</span><br><span class="line">-abinitio::rsd_wt_helix 0.5 </span><br><span class="line">-abinitio::rsd_wt_loop 0.5</span><br><span class="line">-relax::fast                                   relax的模式，没有明显性能损失</span><br><span class="line">-kill_hairpins ./input_files/1elwA.psipred_ss2 在打分中设置 hairpin                                                                        killing</span><br></pre></td></tr></table></figure><br>在集群上跑多任务时你可以会用到的参数<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">-constant_seed                                 seed为常数</span><br><span class="line"></span><br><span class="line">-jran 1234567                                  指定seed，每个seed应该唯一</span><br><span class="line"></span><br><span class="line">-seed_offset 10                                这个值将被添加到随机数种子中。                                                              当使用时间作为seed并将许多作业                                                              提交到一个集群时非常有用。如果作业在同一秒内启                                                  动，当使用唯一偏移量时，它们仍然会有不同的初始                                                  seed。</span><br><span class="line"></span><br></pre></td></tr></table></figure><br>最佳性能的标准命令行如下所示（nstruct的一般在几千到上万不等，看计算情况）。<br><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">-database /path/to/rosetta/main/database </span><br><span class="line">        -in:file:fasta ./input_files/1elwA.fasta </span><br><span class="line">        -in:file:native ./input_files/1elw.pdb </span><br><span class="line">        -in:file:frag3 ./input_files/aa1elwA03_05.200_v1_3 </span><br><span class="line">        -in:file:frag9 ./input_files/aa1elwA09_05.200_v1_3 </span><br><span class="line">        -abinitio:relax </span><br><span class="line">        -relax:fast </span><br><span class="line">        -abinitio::increase_cycles 10 </span><br><span class="line">        -abinitio::rg_reweight 0.5 </span><br><span class="line">        -abinitio::rsd_wt_helix 0.5 </span><br><span class="line">        -abinitio::rsd_wt_loop 0.5 </span><br><span class="line">        -use_filters true </span><br><span class="line">        -psipred_ss2 ./input_files/1elwA.psipred_ss2 </span><br><span class="line">        -kill_hairpins ./input_files/1elwA.psipred_ss2 </span><br><span class="line">        -out:file:silent 1elwA_silent.out (在跑教程的时候我使用的是-out:pdb)</span><br><span class="line">        -nstruct 10</span><br></pre></td></tr></table></figure></p>
+<p>AbinitioRelax应用对长度小于100个残基的小单体蛋白质表现最好(文献5指出小蛋白域&lt;85  残基的高分辨率结构预测(&lt;1.5埃))。它可以对某些蛋白质进行准确的预测，但对于一些长度在150个残基左右的蛋白质，由于构象空间大大增加，较大的蛋白质需要更多的计算量。为了向原生结构靠拢，在20,000到200,000个模型的范围内进行采样并不罕见。参考文献6 7提供了与采样问题相关的信息。</p>
+<p>如果你使用了silent参数，记得用score把结果提出出来</p>
+<p>为了验证预测的正确性，你可以绘制出前5%或10%的模型的得分与rmsd。Total_score和rmsd都在sorce文件中提供了。只有在知道天然结构的情况下，这才是可能的。在现实世界的情况下，可以使用同源蛋白。然而，如果不知道相关结构，你可以使用最低能量的模型（并用例如-native best_E.pdb重新打分）。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Science在创刊125周年时提出了一系列问题，“对于一个给定的序列能否准确预测蛋白质折叠”就是其中一个，这被视为结构生物信息学皇冠上的明珠。目前而言，有两种从序列到结构的预测方法，de novo 和 comparative or homology modeling本文从一些基本概念出发，简略介绍了RosettaCM相关知识以及Ab initio structure prediction的算法，用法。<br>随着计算机算力的发展以及人工神经网络的加入，游戏规则也已经被改变。与传统的fragments方法不同，使用深度学习不需要大量的随机采样，就可以直接得到高质量的蛋白折叠结构，无疑展示出深度学习的强大功能。<br>而当下，随着技术的进步。蛋白质的设计者们不再从自然界已经存在的蛋白质中构建新的蛋白质，而是可以努力精确地制造出新的分子来解决特定的问题—就像现代科技在生物学领域之外所做的那样。<br>相信这个问题终有一天会被攻破！</p>
+
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/2020/08/04/%E5%90%88%E6%88%90%E7%94%9F%E7%89%A9%E5%AD%A6:%E4%B8%80%E4%B8%AA%E6%96%B0%E5%85%B4%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%AD%A6%E7%A7%91/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://i.loli.net/2021/07/28/MpirDQaI9THjgYe.png" data-sizes="auto" alt="合成生物学:一个新兴的工程学科" class="lazyload">
+                    <h1>合成生物学:一个新兴的工程学科</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年08月04日</a>
+            <a><i class="nexmoefont icon-areachart"></i>0 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 1 分钟</a>
+        </div>
+
+        <article>
+            
+                
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/2020/07/20/%E5%85%B3%E4%BA%8E%E8%AE%A1%E7%AE%97%E7%94%9F%E7%89%A9%E5%AD%A6%E5%92%8C%E7%B3%BB%E7%BB%9F%E7%94%9F%E7%89%A9%E5%AD%A6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%87%E7%8C%AE/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://i.loli.net/2021/07/28/MpirDQaI9THjgYe.png" data-sizes="auto" alt="关于计算生物学和系统生物学的一些文献" class="lazyload">
+                    <h1>关于计算生物学和系统生物学的一些文献</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年07月20日</a>
+            <a><i class="nexmoefont icon-areachart"></i>737 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 4 分钟</a>
+        </div>
+
+        <article>
+            
+                <h1 id="Computation-Bio-amp-amp-System-Bio-Reference"><a href="#Computation-Bio-amp-amp-System-Bio-Reference" class="headerlink" title="Computation Bio &amp;&amp; System Bio Reference"></a>Computation Bio &amp;&amp; System Bio Reference</h1><h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><ul>
+<li><p>A Decade of Systems Biology  <u><em>DOI:10.1146/annurev-cellbio-100109-104122</em></u></p>
+</li>
+<li><p>Cell special issue:System biology <a target="_blank" rel="noopener" href="https://www.cell.com/cell/issue?pii=S0092-8674%2811%29X0006-5">Current Issue: Cell</a></p>
+</li>
+<li>Science 2012:Computational Biology <a target="_blank" rel="noopener" href="https://science.sciencemag.org/content/336/6078">Table of Contents: 13 April 2012; 336 (6078)</a></li>
+<li>Computational Methods in Systems Biology <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=hGR_gJjRWsc">Linker</a> 以及右边的相关推荐视频</li>
+</ul>
+<h2 id="Transciption-factor-and-chromatin-factor-binding"><a href="#Transciption-factor-and-chromatin-factor-binding" class="headerlink" title="Transciption factor and chromatin factor binding"></a>Transciption factor and chromatin factor binding</h2><ul>
+<li>An ensemble model of competitive multi-factor binding of the genome [Boltzmann chain]           <u><em>DOI:10.1101/gr.093450.109</em></u></li>
+<li>Biophysical Fitness Landscapes for Transcription Factor Binding Sites [Fermi-Dirac function] <u><em>DOI:10.1371/journal.pcbi.1003683</em></u></li>
+<li>Genome-wide protein–DNA binding dynamics suggest a molecular clutch for transcription factor function [competition ChIP] <u><em>DOI:10.1038/nature10985</em></u></li>
+<li>A High-Throughput Chromatin Immunoprecipitation Approach Reveals Principles of Dynamic Gene Regulation in Mammals [high-throughput ChIP]<u>DOI:<em>10.1016/j.molcel.2012.07.030</em></u></li>
+</ul>
+<h2 id="Modeling-chromatin-states"><a href="#Modeling-chromatin-states" class="headerlink" title="Modeling chromatin states"></a>Modeling chromatin states</h2><ul>
+<li>Mapping and analysis of chromatin state dynamics in nine human cell types [HMM|ENCODE] <u><em>DOI:10.1038/nature09906</em></u></li>
+<li>unsupervised pattern discovery in human chromatin structure through genomic segmentation [Dynamic Bayesian Network] <u><em>DOI:10.1038/nmeth.1937</em></u></li>
+</ul>
+<h2 id="Measuring-and-modeling-gene-transcription-translation-and-decay"><a href="#Measuring-and-modeling-gene-transcription-translation-and-decay" class="headerlink" title="Measuring and modeling gene transcription, translation and decay"></a>Measuring and modeling gene transcription, translation and decay</h2><ul>
+<li>Thermodynamic State Ensemble Models of cis-Regulation [Chemical rate equations] <u><em>DOI:10.1371/journal.pcbi.1002407</em></u></li>
+<li>Determinants of Translation Elongation Speed and Ribosomal Profiling Biases in Mouse Embryonic Stem Cells <u><em>DOI:10.1371/journal.pcbi.1002755</em></u></li>
+<li>Dynamic transcriptome analysis measures rates of mRNA synthesis and decay in yeast [RNA labeling]   <u><em>DOI:10.1038/msb.2010.112</em></u></li>
+<li>Chromatin measurements reveal contributions of synthesis and decay to steady-state mRNA levels [chromatin modifacation] <u><em>DOI:10.1038/msb.2012.23</em></u></li>
+<li>Metabolic labeling of RNA uncovers principles of RNA production and degradation dynamics in mammalian cells [metabolic labeling] <u><em>DOI:10.1038/nbt.1861</em></u></li>
+<li>Global quantification of mammalian gene expression control [parallel metabolic pulse labelling]   <u><strong>Original article</strong> <em>DOI: 10.1038/nature10098</em>  <strong>Corrigendum</strong>  <em>DOI: 10.1038/nature11848</em></u></li>
+</ul>
+<h2 id="Single-cell-dynamics"><a href="#Single-cell-dynamics" class="headerlink" title="Single-cell dynamics"></a>Single-cell dynamics</h2><ul>
+<li>The critical size is set at a single-cell level by growth rate to attain homeostasis and adaptation <u><em>DOI:10.1038/ncomms2015</em></u></li>
+<li>Single-cell RNA-seq reveals dynamic paracrine control of cellular variation <u><em>DOI:10.1038/nature13437</em></u></li>
+</ul>
+<h2 id="Modeling-DNA-replication"><a href="#Modeling-DNA-replication" class="headerlink" title="Modeling DNA replication"></a>Modeling DNA replication</h2><ul>
+<li>Mathematical Modelling of DNA Replication Reveals a Trade-off between Coherence of Origin Activation and Robustness against Rereplication  <u><em>DOI:10.1371/journal.pcbi.1000783</em></u></li>
+</ul>
+<h2 id="Gene-regulatory-networks"><a href="#Gene-regulatory-networks" class="headerlink" title="Gene regulatory networks"></a>Gene regulatory networks</h2><ul>
+<li>Modeling and analysis of gene regulatory networks (Book)</li>
+<li>Construction of regulatory networks using expression time-series data of a genotyped population <u><em>DOI:10.1073/pnas.1116442108</em></u></li>
+<li>Reverse engineering the genotype–phenotype map with natural genetic variation [randomized genetic perturbations] <u><em>DOI:10.1038/nature07633</em></u></li>
+<li>Architecture of the human regulatory network derived from ENCODE data [ENCODE] <u><em>DOI:10.1038/nature11245</em></u></li>
+<li>An atlas of gene regulatory networks reveals multiple three-gene mechanisms for interpreting morphogen gradients <u><em>DOI:10.1038/msb.2010.74</em></u></li>
+</ul>
+<h2 id="Metabolic-network"><a href="#Metabolic-network" class="headerlink" title="Metabolic network"></a>Metabolic network</h2><ul>
+<li>Network-based prediction of human tissue-specific metabolism <u><em>DOI:10.1038/nbt.1487</em></u></li>
+<li>Genome-scale models of microbial cells: evaluating the consequences of constraints <u><em>DOI:doi.org/10.1038/nrmicro1023</em></u></li>
+<li>What is flux balance analysis? <u><em>DOI:doi.org/10.1038/nbt.1614</em></u></li>
+</ul>
+<h2 id="Genetic-circuits-Synthetic-Biology"><a href="#Genetic-circuits-Synthetic-Biology" class="headerlink" title="Genetic circuits, Synthetic Biology"></a>Genetic circuits, Synthetic Biology</h2><ul>
+<li>Engineering Genetic Circuits (BOOK)</li>
+<li>Science special issue 2011:Synthetic biology(Science/AAAS)</li>
+<li>Stochastic Pulse Regulation in Bacterial Stress Response <u><em>DOI:10.1126/science.1208144</em></u></li>
+<li>Principles of genetic circuit design <u><em>DOI:10.1038/nmeth.2926</em></u></li>
+<li>Transcriptional regulation by the numbers: models  <u><em>DOI:10.1016/j.gde.2005.02.007</em></u></li>
+<li>Transcriptional regulation by the numbers: applications  <u><em>DOi:10.1016/j.gde.2005.02.006</em></u></li>
+</ul>
+<h2 id="Whole-cell-computational-model"><a href="#Whole-cell-computational-model" class="headerlink" title="Whole cell computational model"></a>Whole cell computational model</h2><ul>
+<li>A Whole-Cell Computational Model Predicts Phenotype from Genotype <u><em>DOI:10.1016/j.cell.2012.05.044</em></u></li>
+</ul>
+<h2 id="BOOK"><a href="#BOOK" class="headerlink" title="BOOK"></a>BOOK</h2><ul>
+<li>Life: An Introduction to Complex Systems Biology -  kaneko</li>
+<li>Systems Biology: Philosophical Foundations - Fred C.Boogerd</li>
+<li>Bioinformatics Computing - Bryan Bergeron </li>
+<li>Bioinformatics The Machine Learning Approach, Second Edition - Pierre Baldi, Soren Brunak </li>
+<li>Computational Cell Biology - Christopher Fall, Eric Marland, John Wagner, John Tyson </li>
+<li>Computational Molecular Biology An Introduction - Peter Clote, Rolf Backofen</li>
+<li>Computational Molecular Biology An Algorithmic Approach - Pavel A. Pevzner </li>
+<li>Current Topics in Computational Molecular Biology - Tao Jiang , Ying Xu , Michael Q. Zhang </li>
+<li>Gene Regulation and Metabolism Post-Genomic Computational Approaches - Julio Collado-Vides </li>
+<li>Introduction to Computational molecular biology - Carlos Setubal, Joao Meidanis </li>
+<li>Algebraic Statistics for Computational Biology - Lior Pachter and Bernd Sturmfels </li>
+<li>System Modeling in Cell Biology From Concepts to Nuts and Bolts - Zoltan Szallasi, J_rg Stelling, Vipul Periwa </li>
+<li>Systems biology - dynamic pathway modeling - Olaf Waulkenhour </li>
+<li>Systems Biology Properties of Reconstructed Networks - Bernhard o. Palsson </li>
+<li>An Introduction to Systems Biology:Design Principles of Biological Circuits</li>
+</ul>
+
+            
+        </article>
+    </div>
+    
+    <div class="nexmoe-post">
+        <a href="/2020/07/20/%E7%A7%91%E7%A0%94%E6%97%A5%E8%AE%B0/">
+            
+                <div class="nexmoe-post-cover mdui-ripple" style="padding-bottom: 66.66666666666666%;"> 
+                    <img data-src="https://i.loli.net/2021/07/28/MpirDQaI9THjgYe.png" data-sizes="auto" alt="科(自)研(闭)日记" class="lazyload">
+                    <h1>科(自)研(闭)日记</h1>
+                </div>
+            
+        </a>
+
+        <div class="nexmoe-post-meta nexmoe-rainbow">
+            <a><i class="nexmoefont icon-calendar-fill"></i>2020年07月20日</a>
+            <a><i class="nexmoefont icon-areachart"></i>1.8k 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 7 分钟</a>
+        </div>
+
+        <article>
+            
+                <h2 id="July-12-th"><a href="#July-12-th" class="headerlink" title="July 12 th"></a>July 12 <sup>th</sup></h2><h3 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h3><p><strong>今天的实验失败了</strong></p>
+<p>今天试图使用1HN0、2Q1F、1RWH对ABC II进行建模权重信息如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ROSETTASCRIPTS</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">MOVERS</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">Hybridize</span> <span class="attr">name</span>=<span class="string">&quot;hybridize&quot;</span> <span class="attr">stage1_scorefxn</span>=<span class="string">&quot;stage1&quot;</span> <span class="attr">stage2_scorefxn</span>=<span class="string">&quot;stage2&quot;</span> <span class="attr">fa_scorefxn</span>=<span class="string">&quot;fullatom&quot;</span> <span class="attr">batch</span>=<span class="string">&quot;1&quot;</span> <span class="attr">stage1_increase_cycles</span>=<span class="string">&quot;1.0&quot;</span> <span class="attr">stage2_increase_cycles</span>=<span class="string">&quot;1.0&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Template</span> <span class="attr">pdb</span>=<span class="string">&quot;rosetta_cm/2q1fA_thread.pdb&quot;</span> <span class="attr">cst_file</span>=<span class="string">&quot;AUTO&quot;</span> <span class="attr">weight</span>=<span class="string">&quot;1.0&quot;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Template</span> <span class="attr">pdb</span>=<span class="string">&quot;rosetta_cm/1hn0A_thread.pdb&quot;</span> <span class="attr">cst_file</span>=<span class="string">&quot;AUTO&quot;</span> <span class="attr">weight</span>=<span class="string">&quot;1.0&quot;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">Template</span> <span class="attr">pdb</span>=<span class="string">&quot;rosetta_cm/1rwhA_thread.pdb&quot;</span> <span class="attr">cst_file</span>=<span class="string">&quot;AUTO&quot;</span> <span class="attr">weight</span>=<span class="string">&quot;1.0&quot;</span> /&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">Hybridize</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">MOVERS</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ROSETTASCRIPTS</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>Rosetta的控制参数如下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> i/o</span></span><br><span class="line">-in:file:fasta ../rosetta_cm/ABC_II.fasta #输入目标蛋白的序列</span><br><span class="line">-out:path:pdb ../rosetta_cm/Output #结构输出目录</span><br><span class="line">-out:path:score ../rosetta_cm/Output #结构打分输出目录</span><br><span class="line">-nstruct 500 #输出构象数量，不能少于mpi并行核，会报错</span><br><span class="line">-parser:protocol rosetta_cm.xml</span><br><span class="line"><span class="meta"></span></span><br><span class="line"><span class="meta">#</span><span class="bash"> relax options</span></span><br><span class="line">-relax:dualspace </span><br><span class="line">-relax::minimize_bond_angles</span><br><span class="line">-relax:jump_move true</span><br><span class="line">-default_max_cycles 200</span><br><span class="line">-beta_cart</span><br><span class="line">-hybridize:stage1_probability 1.0</span><br></pre></td></tr></table></figure>
+<p>今天大概建了500多个模型，REF2015的总打分是降下来了(1700多)，但是SAVES评价没过。</p>
+<h3 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h3><ol>
+<li>怀疑和<code>SetUP_RosettaCM.py</code>没有输出1HN0_thread有关</li>
+<li>接上条PDB和seq不同步，Rosetta自动解决可能有影响</li>
+</ol>
+<h3 id="Todo"><a href="#Todo" class="headerlink" title="Todo"></a>Todo</h3><ol>
+<li>建颗树吧，从进化的角度，在找找同源模版</li>
+<li>明天试试用双模版吧，就1HN0和2Q1F</li>
+</ol>
+<h2 id="July-13-th"><a href="#July-13-th" class="headerlink" title="July 13 th"></a>July 13 <sup>th</sup></h2><h3 id="摘要-1"><a href="#摘要-1" class="headerlink" title="摘要"></a>摘要</h3><p><strong><em>今天的实验也失败了</em></strong><br>今天在使用<code>setup_RosettaCM.py</code>建立thread模型时，应当把目标蛋白文件放在多序列对比文件<code>aligned.fasta</code>中的第一个，并保持<code>aligned.fasta</code>文件中所有模板文件与PDB文件一致。这样<code>setup_RosettaCM.py</code>才会建立两个thread模型，而不是一个。以后真应该在跑<code>setup_RosettaCM.py</code>之前写个脚本检查所有路径和名字对不对，如果不一样就自动改过来（因为名字和路径写不对可真令人自闭）</p>
+<h3 id="问题-1"><a href="#问题-1" class="headerlink" title="问题"></a>问题</h3><p>今天的问题主要出在执行<code>Hybridize mover</code> 时 <code>HybridizeFoldtreeDynamic: failed to build fold tree from cuts and jumps</code>，尚不清楚是什么原因造成的。可稳定复现感觉像是thread文件哪里有问题，以前没见过。</p>
+<h3 id="ToDo"><a href="#ToDo" class="headerlink" title="ToDo"></a>ToDo</h3><p>1.明天尝试重新使用<code>setUP_RosettaCM.py</code>重新建立thread文件，在使用<code>Hydridize mover</code>重建模型<br>2.可能是Rosetta_script.xml中对于两个thread文件路径有问题，尝试用绝对路径去规定<br>3.srun，scan的命令要熟记，研究一下tail命令</p>
+<h2 id="July-14-th"><a href="#July-14-th" class="headerlink" title="July 14 th"></a>July 14 <sup>th</sup></h2><p><strong><em>今天没做实验帮忙去搞教学大赛了</em></strong><br>认真的发现一把好的人体工程椅真的是脑力劳动者的劳保用具<br>[15日凌晨1点]今天去搞坤坤的PyRosetta API文档了，他在Dash里面做了个API手册。<br>这API和JHU那版是一样的，可以参考一下RosettaCommons在GitHub上的仓库</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/guyujun/PyrosettaAPI-Dash.git #地址</span><br><span class="line">python Build_PyRosetta_DashAPI.py #全自动化下载+编译</span><br></pre></td></tr></table></figure>
+<p>最近看来挺忙的而且同源建模也遇到了瓶颈，科研可以先搁置一下，去按照上次的List读读文献吧。<br>想看看实验，上次写De novo protein design enables the precise induction of RSV-neutralizing antibodies的笔记时就被震撼了。yeast display，directed evolution什么的真的超好奇。</p>
+<h3 id="Todo-1"><a href="#Todo-1" class="headerlink" title="Todo"></a>Todo</h3><ol>
+<li>Matlab for windows｜macOS install </li>
+<li>看看MatLab的语法</li>
+<li>修13号遇到的Bug</li>
+<li>读文献，写笔记</li>
+</ol>
+<h2 id="July-15-th"><a href="#July-15-th" class="headerlink" title="July 15 th"></a>July 15 <sup>th</sup></h2><p><strong><em>今天依然没做实验帮忙教学大赛了</em></strong><br>巨忙且枯燥的一天 Boring……<br><code>Matlab</code>今天装好了，安装过程中的各种Licence要提前找好，没有安装说明就很自闭。<br><code>MatLab</code>的语法貌似比<code>Numpy</code>简单得多(<code>Numpy</code>的<code>API</code>在昨晚配坤坤的<code>PyRosetta</code>的时候已经顺便都放到<code>Dash</code>里面了)而且也很直观，有官方的教程，有需要就跟着教程学就成。</p>
+<h2 id="July-16-th"><a href="#July-16-th" class="headerlink" title="July 16 th"></a>July 16 <sup>th</sup></h2><p><strong>今天解决了如何在macOS中使用aptX作为蓝牙默认解码器的问题。</strong><br>macOS默认的蓝牙器是AAC，延迟大音质不好真的对使用体验造成超大影响。先看了看ifixit的拆解找到了声卡型号是Cirrus Logic家的 CS42L83A，蓝牙模组是Broadcom家的，理论上是可以支持aptX，貌似被软件屏蔽了，考虑能不能通过修改<code>.kext</code>来达到效果。在参考了国外技术论坛中的内容后，发现了Xcode的Additional_Tools中有蓝牙设备的Debug kit （登陆Developer的网站，在Download里面就能找到）,下载，装载。所需要的工具位于<code>../HardWare/BlueToothExplorer.app</code>运行这个软件，在顶部菜单栏找到Tools —&gt; Audio Option -&gt; Force enable aptX 即可。需要重启机器和蓝牙耳机。之后就可以正常使用，顺便一提这工具还能修改传输的码率。</p>
+<h2 id="July-17-th"><a href="#July-17-th" class="headerlink" title="July 17 th"></a>July 17 <sup>th</sup></h2><p><strong>今天是充实的一天</strong><br>早上参加了人工智能和生物技术交叉的一个简短的报告会。报告题目是基因调控元件的人工智能设计，主讲人是汪小我老师。主要内容如下：他首先从维纳的控制论入手，通过类比机器和动物指出我们既然可以设计机器那我们依然也可以设计生命，然后曾老师组通过机器学习的方法以天然promoter序列为样本进行监督学习，筛选出更高效的promoter序列。<br>下午给zotero找了个webDAV来跨设备同步文献，Mendeley太臃肿了虽然内置了PDF阅读器但是那个阅读器实在不好用不如直接抛弃掉。以后就会使用zotero来完成文献管理。<br>晚上搞了一手拉格朗日多项式，多项式本身还好。被秩虐到了…有点自闭，刚学了会数学就疯狂脱发。</p>
+<h2 id="July-18-th"><a href="#July-18-th" class="headerlink" title="July 18 th"></a>July 18 <sup>th</sup></h2><p><strong>今天是京都动画大火一周年的追悼日。</strong><br>其实对于京阿尼的苦难，身为粉丝的我无论如何抒发感情都会显得很矫情。但，还是放心不下京阿尼和这群“亚撒西”的创作者。在A叔去年五月上传的京紫ED“路标”的简介中，他说道“Sincerely真的在做了”。可一年多的时间过去了……“一定是咕咕咕了吧，在做了一定是敷衍，可一个勤奋到几乎周更了的Up却为啥没有Sincerely呢？”<br>昨天看到A叔的预告，预告中说：“仅以本作品悼念一年前京都动画火灾事件中的受害者们。”<br>“原来一年过去了，什么级别得作品才能担此重任呀”我想。<br>一瞬间脑子里闪出一个词“Sincerely”，在今天的的确确看到这一个纪念作是Sincerely之后，内心还是久久不能平静。</p>
+<h2 id="July-19-th"><a href="#July-19-th" class="headerlink" title="July 19 th"></a>July 19 <sup>th</sup></h2><p>今晚把三阶样条曲线和线性回归的视频看完了，这课上居然还讲了神经网络。捣鼓了一下Create ML发现这软件可以可视化的创建一个ML模型，只需要你动动鼠标喂给它数据，就可以全自动训练训练出来。实际上最开始写自闭日记的初衷是为了记录自己的科研生活，后来自己越发的怠惰….</p>
+
+            
+        </article>
+    </div>
+    
+</section>
+
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+ 
+
+<script async src="/js/app.js?v=1627465110760"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
 </script>
 
 
-
-  <link rel="canonical" href="https://razzychen.github.io/"/>
-
-
-
-
-
-  <title>Zichen Yang's Blog</title>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-   page-home 
- ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Zichen Yang's Blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-      
-        <p class="site-subtitle">Undergraduate Student of Biotechnology</p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about-me/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://razzychen.github.io/2021/07/27/%E8%BF%99%E5%91%A8%E9%83%BD%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9FJul26-30/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zichen Yang's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/07/27/%E8%BF%99%E5%91%A8%E9%83%BD%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9FJul26-30/" itemprop="url">这周都做了什么 Jul26-30</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-07-27T19:14:30+08:00">
-                2021-07-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          从本周一开始读Post-bechelor(虽然我本人还没有学士学位)为期6周，课程难度设定在我认为的正常大三的难度。课程教材和每周安排见正文。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2021/07/27/%E8%BF%99%E5%91%A8%E9%83%BD%E5%81%9A%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9FJul26-30/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://razzychen.github.io/2021/06/26/CS229-Welcome/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zichen Yang's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2021/06/26/CS229-Welcome/" itemprop="url">CS229 Note-Welcome</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-06-26T19:08:13+08:00">
-                2021-06-26
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          很早以前就对机器学习感兴趣了(摘要待补充)
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2021/06/26/CS229-Welcome/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zichen Yang's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/" itemprop="url">综述:蛋白质结构预测与设计的进展</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-11-12T19:30:00+08:00">
-                2020-11-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">小白生信笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          在过去十年中，从氨基酸序列去预测蛋白质的三维结构一直是计算生物学中的一个巨大的挑战。现在一个相反的问题出现了，我们可不可以设计一段特定的序列使之能折叠成一种确定的三维结构并使这个人工蛋白在生物工程和医学等领域中发挥出它生理活性呢？这个问题随着时间的流逝渐渐地在理性设计领域成为了一个备受瞩目的全新方向——De Novo Protein Design。在过去十年中，对于蛋白质结构预测以及蛋白设计这个领域来说有着非常令人激动的进展。得益于计算机高性能计算领域的不断发展以及蛋白质序列和结构数据库的快速增长，促成了诸多对于数据量以及计算性能要求极高的结构预测方法的发展。在这篇综述中，我们介绍了结构预测以及蛋白设计的许多现行办法，以及着重介绍了它们所带来的一些成功应用。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://razzychen.github.io/2020/10/29/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E9%83%BD%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86%EF%BC%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zichen Yang's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/10/29/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E9%83%BD%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86%EF%BC%9F/" itemprop="url">为什么我的时间总是不够用？</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-10-29T21:49:00+08:00">
-                2020-10-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%87%AA%E9%97%AD%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">自闭日记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          时间都去哪了～还没好好搞科研怎么就又睡觉了～
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/10/29/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E9%83%BD%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86%EF%BC%9F/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://razzychen.github.io/2020/10/19/19%E6%97%A5%E7%BF%BB%E8%BD%A6%E5%88%86%E6%9E%90/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zichen Yang's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/10/19/19%E6%97%A5%E7%BF%BB%E8%BD%A6%E5%88%86%E6%9E%90/" itemprop="url">19日实验翻车分析</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-10-19T22:30:10+08:00">
-                2020-10-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%87%AA%E9%97%AD%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">自闭日记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
     
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          今天对上周的RosettaCM结果使用SAVES做了分析，结果显示建模结果良好但做到Docking时发现活性中心附近的空间位阻巨大，疑似Hybridize Mover写的有问题。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/10/19/19%E6%97%A5%E7%BF%BB%E8%BD%A6%E5%88%86%E6%9E%90/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://razzychen.github.io/2020/08/04/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zichen Yang's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/04/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B/" itemprop="url">小白生信笔记——蛋白质结构预测</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-04T22:55:32+08:00">
-                2020-08-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">小白生信笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          基于First Principles如何预测蛋白质的折叠到今天仍旧是一个巨大的挑战。随着时代的发展人们开始寻求各种各样的方法来辅助预测，比如说残差神经网络、利用共进化信息等多种方法。本文从基础开始讲起简单概括了一下Homology modeling以及Ab Initio等方法的一些基本概念和原理。
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/08/04/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://razzychen.github.io/2020/08/04/%E5%90%88%E6%88%90%E7%94%9F%E7%89%A9%E5%AD%A6:%E4%B8%80%E4%B8%AA%E6%96%B0%E5%85%B4%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%AD%A6%E7%A7%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zichen Yang's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/08/04/%E5%90%88%E6%88%90%E7%94%9F%E7%89%A9%E5%AD%A6:%E4%B8%80%E4%B8%AA%E6%96%B0%E5%85%B4%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%AD%A6%E7%A7%91/" itemprop="url">合成生物学:一个新兴的工程学科</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-04T21:10:32+08:00">
-                2020-08-04
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%96%87%E7%8C%AE/" itemprop="url" rel="index">
-                    <span itemprop="name">文献</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          在过去十年(2002-2012)的发展中，生物系统出现了一个新的工程类学科——合成生物学。相对于其他学科所不同的是，生物学抛出了一系列工程挑战，这主要是因为我们没有完全了解自然生物系统的原理以及没有很好的工具去编辑它们。为了解决这些挑战，合成生物学正从开发概念验证的设计方法向专注于合理性以及高通量生物工程核心平台发展。这些平台横跨了整个生物设计周期。包括DNA的构建，零件(片段)文库，计算设计工具，以及编辑、探测合成回路的工具。这些技术的发展需要人们要以工科的想法应用于生物学这个理科上。除了针对具体问题的具体解决方法外，我们还推崇更通用的方法。这片综述旨在讨论合成生物学的进展和挑战，并说明合成生物学可能影响生物医学工程以及人类健康的领域
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/08/04/%E5%90%88%E6%88%90%E7%94%9F%E7%89%A9%E5%AD%A6:%E4%B8%80%E4%B8%AA%E6%96%B0%E5%85%B4%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%AD%A6%E7%A7%91/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://razzychen.github.io/2020/07/20/%E5%85%B3%E4%BA%8E%E8%AE%A1%E7%AE%97%E7%94%9F%E7%89%A9%E5%AD%A6%E5%92%8C%E7%B3%BB%E7%BB%9F%E7%94%9F%E7%89%A9%E5%AD%A6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%87%E7%8C%AE/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zichen Yang's Blog">
-    </span>
-
-    
-      <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/20/%E5%85%B3%E4%BA%8E%E8%AE%A1%E7%AE%97%E7%94%9F%E7%89%A9%E5%AD%A6%E5%92%8C%E7%B3%BB%E7%BB%9F%E7%94%9F%E7%89%A9%E5%AD%A6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%87%E7%8C%AE/" itemprop="url">关于计算生物学和系统生物学的一些文献</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-20T17:02:31+08:00">
-                2020-07-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%96%87%E7%8C%AE/" itemprop="url" rel="index">
-                    <span itemprop="name">文献</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          斗胆整理了一些文献，有需要的同学可以看一下：）
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/07/20/%E5%85%B3%E4%BA%8E%E8%AE%A1%E7%AE%97%E7%94%9F%E7%89%A9%E5%AD%A6%E5%92%8C%E7%B3%BB%E7%BB%9F%E7%94%9F%E7%89%A9%E5%AD%A6%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%87%E7%8C%AE/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://razzychen.github.io/2020/07/20/%E7%A7%91%E7%A0%94%E6%97%A5%E8%AE%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zichen Yang's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/07/20/%E7%A7%91%E7%A0%94%E6%97%A5%E8%AE%B0/" itemprop="url">科(自)研(闭)日记</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-07-20T17:01:13+08:00">
-                2020-07-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E8%87%AA%E9%97%AD%E6%97%A5%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">自闭日记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          干啥啥不行 翻车第一名。17号的会AI+BT的主题很对我胃口。Design principle of biology circuits 和Genes X都在看了，下周可以聊聊这些正事了。本周就这样：）
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/07/20/%E7%A7%91%E7%A0%94%E6%97%A5%E8%AE%B0/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-
-
-          </div>
-          
-
-
-          
-
-        </div>
-        
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview sidebar-panel sidebar-panel-active">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
-               alt="" />
-          <p class="site-author-name" itemprop="name"></p>
-           
-              <p class="site-description motion-element" itemprop="description"></p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">9</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">分类</span>
-              
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">20</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/RazzyChen" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                    
-                      GitHub
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/yang-zi-chen-37" target="_blank" title="知乎">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      知乎
-                    
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2020 - 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Yangzichen</span>
-</div>
-
-
-<div class="powered-by">
-  由 <a class="theme-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
-
-
-        
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
 
-  </div>
 
-  
 
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
 </script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-  
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
+
 </html>

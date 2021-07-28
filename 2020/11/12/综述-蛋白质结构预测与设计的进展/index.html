@@ -1,100 +1,19 @@
 <!DOCTYPE html>
 
+<html lang="zh-Hans">
 
-
-  
-
-
-<html class="theme-next mist use-motion" lang="zh-Hans">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
+    
+    <title>综述:蛋白质结构预测与设计的进展 - Zichen Yang&#39;s Blog</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Hello, I am Zichen Yang, a Undergraduate student of biotechnology and a growing protein designer.">
+    <meta name="keywords" content="Protein design and computional biology">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
     
     
-  
 
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="Computional biology,小白生信笔记,Protein structure prediction,Protein design," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
-
-
-
-
-
-
-<meta name="description" content="在过去十年中，从氨基酸序列去预测蛋白质的三维结构一直是计算生物学中的一个巨大的挑战。现在一个相反的问题出现了，我们可不可以设计一段特定的序列使之能折叠成一种确定的三维结构并使这个人工蛋白在生物工程和医学等领域中发挥出它生理活性呢？这个问题随着时间的流逝渐渐地在理性设计领域成为了一个备受瞩目的全新方向——De Novo Protein Design。在过去十年中，对于蛋白质结构预测以及蛋白设计这个领">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="description" content="在过去十年中，从氨基酸序列去预测蛋白质的三维结构一直是计算生物学中的一个巨大的挑战。现在一个相反的问题出现了，我们可不可以设计一段特定的序列使之能折叠成一种确定的三维结构并使这个人工蛋白在生物工程和医学等领域中发挥出它生理活性呢？这个问题随着时间的流逝渐渐地在理性设计领域成为了一个备受瞩目的全新方向——De Novo Protein Design。在过去十年中，对于蛋白质结构预测以及蛋白设计这个领">
 <meta property="og:type" content="article">
 <meta property="og:title" content="综述:蛋白质结构预测与设计的进展">
 <meta property="og:url" content="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/index.html">
@@ -115,274 +34,170 @@
 <meta property="article:tag" content="Protein design">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/box1.png">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '',
-    scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: '小步'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="https://razzychen.github.io/2020/11/12/综述-蛋白质结构预测与设计的进展/"/>
-
-
-
-
-
-  <title>综述:蛋白质结构预测与设计的进展 | Zichen Yang's Blog</title>
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- hexo injector head_end start -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-<!-- hexo injector head_end end --><meta name="generator" content="Hexo 5.4.0"></head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
-
-  
-  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
+    <link rel="stylesheet" href="/css/style.css?v=1627465110681">
     
-  
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1627465110681">
+<meta name="generator" content="Hexo 5.4.0"></head>
 
-  <div class="container sidebar-position-left page-post-detail ">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+<body class="mdui-drawer-body-left">
     
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Zichen Yang's Blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" style="background-image: url(https://i.loli.net/2021/07/28/MpirDQaI9THjgYe.png)"></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="Yangzichen" class="mdui-btn mdui-btn-icon"><img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="Yangzichen"></a>
+            </div>
+        </div>
     </div>
-      
-        <p class="site-subtitle">Undergraduate Student of Biotechnology</p>
-      
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="Yangzichen">
+            <img src="https://cdn.jsdelivr.net/gh/nexmoe/nexmoe.github.io@latest/images/avatar.png" alt="Yangzichen" alt="Yangzichen">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>Articles</span>9</div>
+        <div><span>Tags</span>20</div>
+        <div><span>Categories</span>4</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/public/index.html" title="关于博客">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博客
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="Search"></label>
+            </form>
+         
+    </div>
+</div>
+    
+    <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-social">
+        <a class="mdui-ripple" href="https://space.bilibili.com/5302330" target="_blank" mdui-tooltip="{content: '哔哩哔哩'}" style="color: rgb(231, 106, 141);background-color: rgba(231, 106, 141, .15);">
+            <i class="nexmoefont icon-bilibili"></i>
+        </a><a class="mdui-ripple" href="https://github.com/nexmoe/" target="_blank" mdui-tooltip="{content: 'GitHub'}" style="color: rgb(25, 23, 23);background-color: rgba(25, 23, 23, .15);">
+            <i class="nexmoefont icon-github"></i>
+        </a><a class="mdui-ripple" href="https://www.zhihu.com/people/yang-zi-chen-37" target="_blank" mdui-tooltip="{content: '知乎'}" style="color: rgb(0, 132, 255);background-color: rgba(0, 132, 255, .15);">
+            <i class="nexmoefont icon-zhihu"></i>
+        </a>
+    </div>
+</div>
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">Categories</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/小白生信笔记/">小白生信笔记</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/文献/">文献</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/笔记/">笔记</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/自闭日记/">自闭日记</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
   </div>
 
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+
+    
+    
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/CS229/" style="font-size: 10px;">CS229</a> <a href="/tags/Computional-biology/" style="font-size: 16.67px;">Computional biology</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Post-bachelor/" style="font-size: 10px;">Post-bachelor</a> <a href="/tags/Protein-design/" style="font-size: 10px;">Protein design</a> <a href="/tags/Protein-structure-prediction/" style="font-size: 13.33px;">Protein structure prediction</a> <a href="/tags/Synthetic-Biology/" style="font-size: 10px;">Synthetic Biology</a> <a href="/tags/System-biogloy/" style="font-size: 10px;">System biogloy</a> <a href="/tags/engineering-cycle/" style="font-size: 10px;">engineering cycle</a> <a href="/tags/engineering-organisms/" style="font-size: 10px;">engineering organisms</a> <a href="/tags/genetic-engineering/" style="font-size: 10px;">genetic engineering</a> <a href="/tags/modeling/" style="font-size: 10px;">modeling</a> <a href="/tags/synthetic-circuits/" style="font-size: 10px;">synthetic circuits</a> <a href="/tags/systhetic-devices/" style="font-size: 10px;">systhetic devices</a> <a href="/tags/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0/" style="font-size: 13.33px;">小白生信笔记</a> <a href="/tags/%E5%B9%B2%E5%95%A5%E5%95%A5%E4%B8%8D%E8%A1%8C-%E7%BF%BB%E8%BD%A6%E7%AC%AC%E4%B8%80%E5%90%8D/" style="font-size: 13.33px;">干啥啥不行 翻车第一名</a> <a href="/tags/%E6%97%B6%E9%97%B4%E7%AE%A1%E7%90%86/" style="font-size: 10px;">时间管理</a> <a href="/tags/%E7%A7%91%E7%A0%94%E6%97%A5%E8%AE%B0/" style="font-size: 13.33px;">科研日记</a> <a href="/tags/%E8%87%AA%E9%97%AD/" style="font-size: 20px;">自闭</a> <a href="/tags/%E8%AF%91%E7%A8%BF/" style="font-size: 10px;">译稿</a>
+    </div>
+    
   </div>
+
+    
+</aside>
+    <div class="nexmoe-copyright">
+        &copy; 2021 Yangzichen
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        <br><a target="_blank" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="https://i.dawnlab.me/c0268c1e6cfd0863d6ba35be1575941a.png" width="150px"></a><script data-ad-client="ca-pub-2058306854838448" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+            <div class="nexmoe-post">
+
+  <article>
+      
+          <div class="nexmoe-post-cover" style="padding-bottom: 66.66666666666666%;"> 
+              <img data-src="https://i.loli.net/2021/07/28/MpirDQaI9THjgYe.png" data-sizes="auto" alt="综述:蛋白质结构预测与设计的进展" class="lazyload">
+              <h1>综述:蛋白质结构预测与设计的进展</h1>
+          </div>
+      
+      
+      <div class="nexmoe-post-meta nexmoe-rainbow" style="margin:10px 0!important;">
+    <a><i class="nexmoefont icon-calendar-fill"></i>2020年11月12日</a>
+    <a><i class="nexmoefont icon-areachart"></i>3.7k 字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>大概 15 分钟</a>
 </div>
 
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            首页
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            归档
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about-me/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            关于
-          </a>
-        </li>
       
 
-      
-    </ul>
-  
-
-  
-</nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
-    
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zichen Yang's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">综述:蛋白质结构预测与设计的进展</h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-11-12T19:30:00+08:00">
-                2020-11-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index">
-                    <span itemprop="name">小白生信笔记</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-              <div class="post-description">
-                  在过去十年中，从氨基酸序列去预测蛋白质的三维结构一直是计算生物学中的一个巨大的挑战。现在一个相反的问题出现了，我们可不可以设计一段特定的序列使之能折叠成一种确定的三维结构并使这个人工蛋白在生物工程和医学等领域中发挥出它生理活性呢？这个问题随着时间的流逝渐渐地在理性设计领域成为了一个备受瞩目的全新方向——De Novo Protein Design。在过去十年中，对于蛋白质结构预测以及蛋白设计这个领域来说有着非常令人激动的进展。得益于计算机高性能计算领域的不断发展以及蛋白质序列和结构数据库的快速增长，促成了诸多对于数据量以及计算性能要求极高的结构预测方法的发展。在这篇综述中，我们介绍了结构预测以及蛋白设计的许多现行办法，以及着重介绍了它们所带来的一些成功应用。
-              </div>
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>天然进化的蛋白质具有惊人的分子功能多样性，这是由于它们的精妙的三维结构的细微不同所产生的，而三维结构又由其遗传信息所编码的的氨基酸序列决定。因此，对氨基酸序列与蛋白质结构之间关系的预测性理解将开辟新的途径，既可以从基因组序列数据中预测功能，也可以通过设计具有特定结构的氨基酸序列，来合理地设计新型蛋白质功能。在过去的十年里，我们预测和设计蛋白质三维结构的能力有了极大的提高，使我们对医学和生物学的理解又加深了很多。已经开发出了新的机器学习算法，可以分析蛋白质家族中相关突变的模式，从而仅从序列信息中预测结构上相互作用的残基。使用改进的蛋白质能量函数<a href="#Footnote"><sup>i</sup></a>首次计算就可能从一个近似的结构预测模型开始，并通过能量引导的优化过程使其更接近实验确定的结构。<br>蛋白质构象采样和序列优化方面的进展使得新型蛋白质结构和复合物的设计成为可能，其中一些结构和复合物显示出作为药物的前景。这些进展在蛋白质结构预测和设计已经推动了技术突破以及生物数据库的快速增长。<br>蛋白质建模算法(<a href="#pic">见下图所显示</a>）的开发和应用都需要庞大的计算能力。研究人员可用的算力（包括基于CPU的算力以及越来越多的基于GPU的算力）的快速增长促进了新算法的快速测试，并使其能够应用于更大的分子和分子组合。同时，随着基因组和宏基因组测序工作的扩大，下一代测序促进了蛋白质序列数据库的急剧膨胀。软件和自动化方面的进步提高了实验结构测定的速度，加快了由实验所测定的蛋白质结构数据库（Protein Data Bank，PDB）的增长，目前该数据库包含了近15万个大分子结构。同时深度学习算法使图像处理和语音识别发生了革命性的变化，这些序列以及结构的庞大数据量为深度学习提供了巨量的可用样本。<br>在这篇综述中，我们重点介绍了这些技术进步所带来的一些最新突破。我们简述了当前预测和设计蛋白质结构的方法，主要侧重于不需要实验确定的结构作为模板的无模板方法。我们将讨论这些建模方法的优点和缺点，以及它们目前和潜在的应用。最后，我们将评论这些发展对生物学和医学领域的更广泛的实际影响。<br>蛋白质构象的energy landscape<a href="#Footnote"><sup>v</sup></a>是高维的复杂表面，有许多局部最小值。为了快速定位低能量位置的结构需要有效的采样方法和准确的能量函数。在基于梯度的优化方法（<a href="#pic">见图</a>，左上角），能量函数的导数与结构的自由度（如原子坐标或骨架扭转角）计算，以便在能量下降最快的方向进行。多年的经验证明基于梯度的优化是有效的，但结构会被困在能量的局部最小值的。<br>而蒙特卡罗采样方法采用随机选择的构象移动和“上坡”的步骤，以逃避局部最小值（<a href="#pic">见图</a>）。在一种叫做Metropolis Mento Carlo的算法中中，采样移动根据能量的变化被接受（绿色箭头）或拒绝（红色箭头）。而上坡运动(虚线箭头)则以概率P接受，该概率P作为能量变化的函数呈指数级递减。用于蒙特卡罗模拟的运动集的例子包括片段替换运动，其中当前构型中的连续骨架段被片段库中的替代构型所替换，以及侧链轮换。一个流行的替代蒙特卡罗取样的方法是分子动力学模拟（即MD,<a href="#pic">见图</a>，右上角），其中构象取样是由牛顿运动定律应用于分子系统的势能函数即分子力场所决定的。给定一组起始的原子位置和速度，通过取势能的梯度来计算作用在每个原子上的力，并由牛顿第二定律（F=ma）得出结果的加速度。在时间尺度上向前迈出很小的一步(通常是几个飞秒的量级)，然后在此基础上计算新的位置和速度，可这样看来我们关心问题实际是肽链折叠时能量面的采样，研究的主要目的是为了建构出蛋白质折叠等运动过程中的一个准确的能量面，一般蛋白质折叠过程中“过渡态”（位于能垒上）和形成正确折叠的重要的“中间状态”的寻找认为是属于动力学研究的范畴。可另外一个角度来说关注的是在能量面上的“粒子”的扩散问题(周期性边界条件)，暂且按下不表<a href="#Footnote"><sup>ii</sup></a>。<br>时间步长与原子旧的位置、速度和加速度的大小。在准确的能量函数和足够小的时间步长的情况下MD可以提供对能量面的广泛采样，同时也提供了单个分子如何随时间演化的真实情况。不过基于MD的建模方法所面临的挑战是，必须进行数百万到数万亿个时间步长的模拟才能达到与生物学相关的时间尺度，这就需要高性能的软件以及一些特殊的硬件架构（例如CUDA<a href="#Footnote"><sup>2</sup></a><sup>,</sup><a href="#References"><sup>iii</sup></a>等），在某些情况下，甚至需要超级计算机。</p>
+      <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>天然进化的蛋白质具有惊人的分子功能多样性，这是由于它们的精妙的三维结构的细微不同所产生的，而三维结构又由其遗传信息所编码的的氨基酸序列决定。因此，对氨基酸序列与蛋白质结构之间关系的预测性理解将开辟新的途径，既可以从基因组序列数据中预测功能，也可以通过设计具有特定结构的氨基酸序列，来合理地设计新型蛋白质功能。在过去的十年里，我们预测和设计蛋白质三维结构的能力有了极大的提高，使我们对医学和生物学的理解又加深了很多。已经开发出了新的机器学习算法，可以分析蛋白质家族中相关突变的模式，从而仅从序列信息中预测结构上相互作用的残基。使用改进的蛋白质能量函数<a href="#Footnote"><sup>i</sup></a>首次计算就可能从一个近似的结构预测模型开始，并通过能量引导的优化过程使其更接近实验确定的结构。<br>蛋白质构象采样和序列优化方面的进展使得新型蛋白质结构和复合物的设计成为可能，其中一些结构和复合物显示出作为药物的前景。这些进展在蛋白质结构预测和设计已经推动了技术突破以及生物数据库的快速增长。<br>蛋白质建模算法(<a href="#pic">见下图所显示</a>）的开发和应用都需要庞大的计算能力。研究人员可用的算力（包括基于CPU的算力以及越来越多的基于GPU的算力）的快速增长促进了新算法的快速测试，并使其能够应用于更大的分子和分子组合。同时，随着基因组和宏基因组测序工作的扩大，下一代测序促进了蛋白质序列数据库的急剧膨胀。软件和自动化方面的进步提高了实验结构测定的速度，加快了由实验所测定的蛋白质结构数据库（Protein Data Bank，PDB）的增长，目前该数据库包含了近15万个大分子结构。同时深度学习算法使图像处理和语音识别发生了革命性的变化，这些序列以及结构的庞大数据量为深度学习提供了巨量的可用样本。<br>在这篇综述中，我们重点介绍了这些技术进步所带来的一些最新突破。我们简述了当前预测和设计蛋白质结构的方法，主要侧重于不需要实验确定的结构作为模板的无模板方法。我们将讨论这些建模方法的优点和缺点，以及它们目前和潜在的应用。最后，我们将评论这些发展对生物学和医学领域的更广泛的实际影响。<br>蛋白质构象的energy landscape<a href="#Footnote"><sup>v</sup></a>是高维的复杂表面，有许多局部最小值。为了快速定位低能量位置的结构需要有效的采样方法和准确的能量函数。在基于梯度的优化方法（<a href="#pic">见图</a>，左上角），能量函数的导数与结构的自由度（如原子坐标或骨架扭转角）计算，以便在能量下降最快的方向进行。多年的经验证明基于梯度的优化是有效的，但结构会被困在能量的局部最小值的。<br>而蒙特卡罗采样方法采用随机选择的构象移动和“上坡”的步骤，以逃避局部最小值（<a href="#pic">见图</a>）。在一种叫做Metropolis Mento Carlo的算法中中，采样移动根据能量的变化被接受（绿色箭头）或拒绝（红色箭头）。而上坡运动(虚线箭头)则以概率P接受，该概率P作为能量变化的函数呈指数级递减。用于蒙特卡罗模拟的运动集的例子包括片段替换运动，其中当前构型中的连续骨架段被片段库中的替代构型所替换，以及侧链轮换。一个流行的替代蒙特卡罗取样的方法是分子动力学模拟（即MD,<a href="#pic">见图</a>，右上角），其中构象取样是由牛顿运动定律应用于分子系统的势能函数即分子力场所决定的。给定一组起始的原子位置和速度，通过取势能的梯度来计算作用在每个原子上的力，并由牛顿第二定律（F=ma）得出结果的加速度。在时间尺度上向前迈出很小的一步(通常是几个飞秒的量级)，然后在此基础上计算新的位置和速度，可这样看来我们关心问题实际是肽链折叠时能量面的采样，研究的主要目的是为了建构出蛋白质折叠等运动过程中的一个准确的能量面，一般蛋白质折叠过程中“过渡态”（位于能垒上）和形成正确折叠的重要的“中间状态”的寻找认为是属于动力学研究的范畴。可另外一个角度来说关注的是在能量面上的“粒子”的扩散问题(周期性边界条件)，暂且按下不表<a href="#Footnote"><sup>ii</sup></a>。<br>时间步长与原子旧的位置、速度和加速度的大小。在准确的能量函数和足够小的时间步长的情况下MD可以提供对能量面的广泛采样，同时也提供了单个分子如何随时间演化的真实情况。不过基于MD的建模方法所面临的挑战是，必须进行数百万到数万亿个时间步长的模拟才能达到与生物学相关的时间尺度，这就需要高性能的软件以及一些特殊的硬件架构（例如CUDA<a href="#Footnote"><sup>2</sup></a><sup>,</sup><a href="#References"><sup>iii</sup></a>等），在某些情况下，甚至需要超级计算机。</p>
 <div id="pic"></div>
 
-<p><img src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/box1.png" alt="Box1.png"></p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/box1.png" alt="Box1.png" class="lazyload"></p>
 <h1 id="蛋白质折叠驱动力"><a href="#蛋白质折叠驱动力" class="headerlink" title="蛋白质折叠驱动力"></a>蛋白质折叠驱动力</h1><p>蛋白质具有自发地精确地折叠成确定的三维结构的能力。折叠实验确定，指定蛋白质折叠构象（处在标准生理环境下）所需的信息完全包含在其氨基酸的一级序列中。根据Anfinsen假设<a href="#Footnote"><sup>iv</sup></a>，这种信息被编码在多肽的energy landscape<a href="#Footnote"><sup>v</sup></a>中，并且原生态具有最小的自由能。这一假说是一般的蛋白质结构预测方法的基础理论：将构象的采样和打分相结合，按能量进行排序并确定能量最低的状态。这种由能量所引导的方法所遇到主要问题是蛋白质的构象空间过于巨大即，假设每个氨基酸只有有限且离散的一组骨架构象，那么该蛋白质的构象空间也会随着多肽链的长度增加和成指数级地增加，并在及其短的时间内达到天文数字级别，对于这种困难人们认识到对于折叠构象的搜索必不可能是完全的随机搜索，否则蛋白质折叠所需要的时间尺度甚至可以超过宇宙寿命。蛋白质折叠必然是按照特定的途径“有目的”地折叠<a href="#Footnote"><sup>vi</sup></a>。不过landscape并不是一个光滑的平面和一个深洞(类似于高尔夫球场和球洞那样的关系)，而是一个崎岖不平的漏斗形。这些局部能量极小值可能是由于一些在全局折叠完成之前的一些次级结构。<br>人们认为蛋白质折叠的驱动力是疏水作用。折叠与构象熵的损失相对，构象熵的损失伴随着柔性多肽链塌陷成确定的3D构象。蛋白质中非极性侧链的紧密堆积增强了范德华力的相互作用，并消除了在熵方面不利的空腔（图1b）。此外，这种拼图游戏般的包装方式是在满足强烈的主干和侧链扭转偏好的同时实现的，这些偏好限制了观察到的扭转角分布（图1b的下部），有效地降低了侧链柔韧性到离散组的附近。在每个位置旋转。蛋白质内的氢键和盐桥在很大程度上补偿了与水相互作用的损失，因为极性基团在折叠过程中被掩埋，因此这些相互作用对天然状态的稳定性的贡献小于对天然状态的特异性的贡献（也就是说，它们有助于区分天然状态）。其他紧凑状态的原始状态）。尽管可以从低分辨率结构模型中检测到疏水性掩埋和主链氢键结合，但紧密的核堆积以及不存在区分天然状态的掩埋的，不满意的极性基团，都需要对侧链自由度进行显式建模。结果，用于结构预测和设计的分子建模方法通常采用多个级别的分辨率：使用具有计算效率的粗粒度能量函数执行大规模构象采样，该函数捕获疏水埋葬，形成二级结构并避免原子重叠;最终的蛋白质模型选择和完善需要使用更耗时的高分辨率原子能函数对氨基酸侧链进行显式建模（图1c）。</p>
-<p><img src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape1.png" alt="landscape"><br>这张图是蛋白质折叠景观和能量的示意图<br>a 是简化的、二维的高尔夫球场和漏斗形energey landscape表示。要找到左侧的全局能量最小值(N)需要进行详尽的探索，而对于右图来说从大多数起点开始进行简单的梯度下降就可以找到全局最小值。<br>b 区分是否为蛋白质原生折叠状态的能量特征包括： 1: 疏水作用（这里显示的是小蛋白泛素的剖视图），非极性侧链埋藏在蛋白核心骨架和侧链氢键中（氢键显示为点状绿线）。紧密的侧链包装(在蛋白质核心的切片中可见)和受限的骨架和侧链扭转角分布(从氨基酸异亮氨酸的骨架-phi角与psi角-侧链chil角与chi2角-扭转角的高度集中的二维概率分布中可以看出)。<br>c 蛋白质能量学的计算模型提供了速度和精度之间的权衡。Centroid模型是计算效率和有效地平滑的能量景观，允许大规模的采样，但也引入了不准确的最小值（例如，蓝色盆地左侧的局部最小值在这部分，用箭头突出显示）。Fullatom能量函数更准确，但评估速度也更慢，对结构细节也很敏感，这就给landscape引入了崎岖不平的局部极小值，使其更难有效地到达全局最小值。</p>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape1.png" alt="landscape" class="lazyload"><br>这张图是蛋白质折叠景观和能量的示意图<br>a 是简化的、二维的高尔夫球场和漏斗形energey landscape表示。要找到左侧的全局能量最小值(N)需要进行详尽的探索，而对于右图来说从大多数起点开始进行简单的梯度下降就可以找到全局最小值。<br>b 区分是否为蛋白质原生折叠状态的能量特征包括： 1: 疏水作用（这里显示的是小蛋白泛素的剖视图），非极性侧链埋藏在蛋白核心骨架和侧链氢键中（氢键显示为点状绿线）。紧密的侧链包装(在蛋白质核心的切片中可见)和受限的骨架和侧链扭转角分布(从氨基酸异亮氨酸的骨架-phi角与psi角-侧链chil角与chi2角-扭转角的高度集中的二维概率分布中可以看出)。<br>c 蛋白质能量学的计算模型提供了速度和精度之间的权衡。Centroid模型是计算效率和有效地平滑的能量景观，允许大规模的采样，但也引入了不准确的最小值（例如，蓝色盆地左侧的局部最小值在这部分，用箭头突出显示）。Fullatom能量函数更准确，但评估速度也更慢，对结构细节也很敏感，这就给landscape引入了崎岖不平的局部极小值，使其更难有效地到达全局最小值。</p>
 <h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><div id="Footnote"></div>
 
 <p>I. Protein energy functions：即蛋白质能量函数，也被称为打分函数。对应于确定蛋白质结构和相互作用的分子力数学模型的功能。 能量函数的选择定义了从结构到能量值的映射，它可以指导结构预测和设计模拟。典型的蛋白质能量函数是多个项的线性组合，每个项都描述了不同的能量贡献（范德华相互作用，静电，去溶剂化）。在Fullatom模式下，Rosetta最新的打分函数REF15的打分项目可参考这两个连接<a href="#References"><sup>5,6</sup></a>。</p>
@@ -390,7 +205,7 @@
 <p>iii. 这里并不仅仅指CUDA Tool Kit还有作为硬件的CUDA，即CUDA Core。</p>
 <p>iv. 这个假设指出了对于处在标准生理环境下的球蛋白而言没，其原生结构仅由该蛋白质的一级序列决定，并且该蛋白质的的原生结构是一个独特的、稳定的、动力学上可获得的。</p>
 <p>v. 下文会解释什么是energy landscape,这词的中文翻译我都不太满意= =</p>
-<p>vi. 那landscape为什么不是像下图所示的红色曲线，而是蓝色的呢？<a href="#References"><sup>7</sup></a><br><img src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape.png" alt="蛋白质的Funneled landscape和Glass like landscape的对比图"><br>我个人的看法是这样的：从进化的角度因为红色曲线对应的蛋白质没有一个占主要位置的全局能量最小值，因此很难折叠到一个非常稳定的状态，从而难以实现相对应的生物学功能，最终这样的蛋白质就会被自然淘汰，剩下的蛋白基本上都是蓝色曲线所对应的。</p>
+<p>vi. 那landscape为什么不是像下图所示的红色曲线，而是蓝色的呢？<a href="#References"><sup>7</sup></a><br><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/landscape.png" alt="蛋白质的Funneled landscape和Glass like landscape的对比图" class="lazyload"><br>我个人的看法是这样的：从进化的角度因为红色曲线对应的蛋白质没有一个占主要位置的全局能量最小值，因此很难折叠到一个非常稳定的状态，从而难以实现相对应的生物学功能，最终这样的蛋白质就会被自然淘汰，剩下的蛋白基本上都是蓝色曲线所对应的。</p>
 <h1 id="References"><a href="#References" class="headerlink" title="References"></a>References</h1><div id="References"></div>
 
 <ol>
@@ -404,388 +219,116 @@
 </ol>
 <h1 id="后记-amp-致谢"><a href="#后记-amp-致谢" class="headerlink" title="后记 &amp; 致谢"></a>后记 &amp; 致谢</h1><div id="Afterword"></div>
 
-<p>实际上这篇文章是一个早有预谋且逐步实施的过程:<br><img src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/timeline.png" alt="timeline"><br>最开始我自诩认为自己对这个领域还算是小有了解，可看到目前为止暴露出很多很多问题：在看Protein-folding forces这部分的时候相关的entropy、energy令我痛苦万分，真的就是自闭。(如果有哪位前辈知道定量描述蛋白质折叠这方面的教材或者文章欢迎随时call我)<br>早些时候旁听了Becca姐关于Contrastive Learning的组会报告。“哇太强了，原来这就是博士生组会报告么”随后朋友圈里就刷到了某二十代巨佬的NC文章，临近开学又看到了Computational design of transmembrane pores这篇文章顿时开始怀疑人生。在此期间非常感谢Rui姐、杨晈学长、志宇学姐以及各位老师的鼓励。<br><img src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/acknowledge.jpeg" alt="acknowledge"><br>路漫漫其修远兮，吾将上下而求索。新的一年请各位多指教。</p>
+<p>实际上这篇文章是一个早有预谋且逐步实施的过程:<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/timeline.png" alt="timeline" class="lazyload"><br>最开始我自诩认为自己对这个领域还算是小有了解，可看到目前为止暴露出很多很多问题：在看Protein-folding forces这部分的时候相关的entropy、energy令我痛苦万分，真的就是自闭。(如果有哪位前辈知道定量描述蛋白质折叠这方面的教材或者文章欢迎随时call我)<br>早些时候旁听了Becca姐关于Contrastive Learning的组会报告。“哇太强了，原来这就是博士生组会报告么”随后朋友圈里就刷到了某二十代巨佬的NC文章，临近开学又看到了Computational design of transmembrane pores这篇文章顿时开始怀疑人生。在此期间非常感谢Rui姐、杨晈学长、志宇学姐以及各位老师的鼓励。<br><img data-fancybox="gallery" data-sizes="auto" data-src="/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/acknowledge.jpeg" alt="acknowledge" class="lazyload"><br>路漫漫其修远兮，吾将上下而求索。新的一年请各位多指教。</p>
 
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/Computional-biology/" rel="tag"># Computional biology</a>
-          
-            <a href="/tags/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0/" rel="tag"># 小白生信笔记</a>
-          
-            <a href="/tags/Protein-structure-prediction/" rel="tag"># Protein structure prediction</a>
-          
-            <a href="/tags/Protein-design/" rel="tag"># Protein design</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2020/10/29/%E6%88%91%E7%9A%84%E6%97%B6%E9%97%B4%E9%83%BD%E5%8E%BB%E5%93%AA%E9%87%8C%E4%BA%86%EF%BC%9F/" rel="next" title="为什么我的时间总是不够用？">
-                <i class="fa fa-chevron-left"></i> 为什么我的时间总是不够用？
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2021/06/26/CS229-Welcome/" rel="prev" title="CS229 Note-Welcome">
-                CS229 Note-Welcome <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
   </article>
 
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-  <div class="comments" id="comments">
-    
-  </div>
-
-
-        </div>
-        
-          
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+      
+    <div class="nexmoe-post-copyright">
+        <strong>Author：</strong>Yangzichen<br>
+        <strong>Link：</strong><a href="https://razzychen.github.io/2020/11/12/%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95/" title="https:&#x2F;&#x2F;razzychen.github.io&#x2F;2020&#x2F;11&#x2F;12&#x2F;%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;razzychen.github.io&#x2F;2020&#x2F;11&#x2F;12&#x2F;%E7%BB%BC%E8%BF%B0-%E8%9B%8B%E7%99%BD%E8%B4%A8%E7%BB%93%E6%9E%84%E9%A2%84%E6%B5%8B%E4%B8%8E%E8%AE%BE%E8%AE%A1%E7%9A%84%E8%BF%9B%E5%B1%95&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
     </div>
-  </div>
 
-  <aside id="sidebar" class="sidebar">
-    
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.png"
-               alt="" />
-          <p class="site-author-name" itemprop="name"></p>
-           
-              <p class="site-description motion-element" itemprop="description"></p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">9</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-categories">
-              
-                <span class="site-state-item-count">4</span>
-                <span class="site-state-item-name">分类</span>
-              
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">20</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/RazzyChen" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                    
-                      GitHub
-                    
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="https://www.zhihu.com/people/yang-zi-chen-37" target="_blank" title="知乎">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                    
-                      知乎
-                    
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%9B%8B%E7%99%BD%E8%B4%A8%E6%8A%98%E5%8F%A0%E9%A9%B1%E5%8A%A8%E5%8A%9B"><span class="nav-number">2.</span> <span class="nav-text">蛋白质折叠驱动力</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B3%A8%E9%87%8A"><span class="nav-number">3.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#References"><span class="nav-number">4.</span> <span class="nav-text">References</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0-amp-%E8%87%B4%E8%B0%A2"><span class="nav-number">5.</span> <span class="nav-text">后记 &amp; 致谢</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
-    </div>
-  </aside>
-
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2020 - 
-  <span itemprop="copyrightYear">2021</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Yangzichen</span>
-</div>
-
-
-<div class="powered-by">
-  由 <a class="theme-link" target="_blank" rel="noopener" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
-
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" target="_blank" rel="noopener" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Mist
-  </a>
-</div>
-
-
-        
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-  </div>
 
   
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+    
+        <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0/">小白生信笔记</a>
+    
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Computional-biology/" rel="tag">Computional biology</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Protein-design/" rel="tag">Protein design</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/Protein-structure-prediction/" rel="tag">Protein structure prediction</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E5%B0%8F%E7%99%BD%E7%94%9F%E4%BF%A1%E7%AC%94%E8%AE%B0/" rel="tag">小白生信笔记</a>
+    
+</div>
 
+  
+      <div class="nexmoe-post-footer">
+          <section class="nexmoe-comment">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.css">
+<div id="gitalk"></div>
+<script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script>
 <script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+    var gitalk = new Gitalk({
+        clientID: '80b2453b6d5f37ad6225',
+        clientSecret: '43e99fa852795c9a7b3eb924b2558c64b84bbdeb',
+        id: window.location.pathname,
+        repo: 'nexmoe.github.io',
+        owner: 'nexmoe',
+        admin: 'nexmoe'
+    })
+    gitalk.render('gitalk')
+</script>
+</section>
+      </div>
+  
+</div>
+            <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%9B%8B%E7%99%BD%E8%B4%A8%E6%8A%98%E5%8F%A0%E9%A9%B1%E5%8A%A8%E5%8A%9B"><span class="toc-number">2.</span> <span class="toc-text">蛋白质折叠驱动力</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">3.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#References"><span class="toc-number">4.</span> <span class="toc-text">References</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8E%E8%AE%B0-amp-%E8%87%B4%E8%B0%A2"><span class="toc-number">5.</span> <span class="toc-text">后记 &amp; 致谢</span></a></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="回到顶部" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/combine/npm/lazysizes@5.1.0/lazysizes.min.js,npm/mdui@0.4.3/dist/js/mdui.min.js?v=1"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+ 
+
+<script async src="/js/app.js?v=1627465110686"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
+<script>
+	$(".justified-gallery").justifiedGallery({
+		rowHeight: 160,
+		margins: 10,
+	});
 </script>
 
 
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
+    
+
+
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 
 </body>
+
 </html>
