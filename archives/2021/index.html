@@ -24,9 +24,9 @@
 <meta property="article:tag" content="Protein design and computional biology">
 <meta name="twitter:card" content="summary">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/highlight.js@9.15.8/styles/atom-one-dark.css,npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css,gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css,npm/hexo-theme-nexmoe@latest/source/lib/mdui_043tiny/css/mdui.css,npm/hexo-theme-nexmoe@latest/source/lib/iconfont/iconfont.css?v=233" crossorigin>
-    <link rel="stylesheet" href="/css/style.css?v=1627549576514">
+    <link rel="stylesheet" href="/css/style.css?v=1627809894139">
     
-    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1627549576514">
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1627809894139">
 <meta name="generator" content="Hexo 5.4.0"></head>
 
 <body class="mdui-drawer-body-left">
@@ -177,8 +177,8 @@
 
         <div class="nexmoe-post-meta nexmoe-rainbow">
             <a><i class="nexmoefont icon-calendar-fill"></i>2021年07月27日</a>
-            <a><i class="nexmoefont icon-areachart"></i>1.5k 字</a>
-            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 7 分钟</a>
+            <a><i class="nexmoefont icon-areachart"></i>1.9k 字</a>
+            <a><i class="nexmoefont icon-time-circle-fill"></i>大概 8 分钟</a>
         </div>
 
         <article>
@@ -208,10 +208,37 @@
 <li>范德蒙</li>
 </ol>
 <h1 id="物理化学"><a href="#物理化学" class="headerlink" title="物理化学"></a>物理化学</h1><p>本周的物理化学=量子力学+统计力学<br>为此我还特意去看sobereva老师推荐的IRA N.Levine的Quantumm chemistry(fifth edition)<br>分子的能量并不只包括手册里所列的键能</p>
-<h2 id="一个分子拥有的能量"><a href="#一个分子拥有的能量" class="headerlink" title="一个分子拥有的能量"></a>一个分子拥有的能量</h2><h3 id="Time-independent-Schrodinger-equation"><a href="#Time-independent-Schrodinger-equation" class="headerlink" title="Time-independent Schrodinger equation"></a>Time-independent Schrodinger equation</h3><p>$ -\dfrac{\hbar }{2m}\nabla ^{2}\psi \left( x\right) +V\left( x\right)\psi \left( x\right)=E\psi \left( x\right)$<br>在量子力学中，单粒子服从的运动方程是薛定谔方程。薛定谔方程在量子力学中的地位相当于牛顿第二定律在经典力学中的地位。一维的含时薛定谔方程形式为，其中$ V\left( x\right) $为势函数，相当于牛顿第二定律的力的地位。因此，理论上只要给定一个确定的势函数，以及一个确定的初始条件，就能得到粒子后续的运动情况。</p>
-<h3 id="无限深势阱箱"><a href="#无限深势阱箱" class="headerlink" title="无限深势阱箱"></a>无限深势阱箱</h3><p>势阱箱只是表示一个如图所示的势能函数而已，看看是不是挺形象的？关注一下它的形式：<br>$ V=\begin{cases}0,0\leq x\leq L\\ \infty , 其他情况\end{cases} $<br>L为势阱箱的边长</p>
-<h3 id="平动能级"><a href="#平动能级" class="headerlink" title="平动能级"></a>平动能级</h3><p>实际上就是在实际上就是在势阱箱中解定态薛定谔方程(也就是上面说的Time-independent Schrodinger equation)<br>解得平动动能为:<br>$ \\ \varepsilon_{n_{1},n_{2},n_{3}} = \left( \dfrac{n_{1}^{2}}{a^{2}}+\dfrac{n_{2}^{2}}{b^{2}}+\dfrac{n_{3}^{2}}{c^{2}}\right) = \dfrac{\hbar^{2} }{8m}$<br>如果势阱箱为长方形的箱子，则a,b,c为其边长<br>如果为立方箱则有：<br>$\varepsilon_{n_{1},n_{2},n_{3}}=\left(n_{1}^{2}+n_{2}^{2}+n_{3}^{2}\right) = \dfrac{\overline{\hbar}^{2}}{8mV^{2/3}}$<br>我们</p>
-
+<h2 id="一个分子拥有的能量"><a href="#一个分子拥有的能量" class="headerlink" title="一个分子拥有的能量"></a>一个分子拥有的能量</h2><h3 id="定态薛定谔方程（Time-independent-Schrodinger-equation）"><a href="#定态薛定谔方程（Time-independent-Schrodinger-equation）" class="headerlink" title="定态薛定谔方程（Time-independent Schrodinger equation）"></a>定态薛定谔方程（Time-independent Schrodinger equation）</h3><p>$ -\dfrac{\hbar }{2m}\nabla ^{2}\psi \left( x\right) +V\left( x\right)\psi \left( x\right)=E\psi \left( x\right)$</p>
+<p>在量子力学中，单粒子服从的运动方程是薛定谔方程。薛定谔方程在量子力学中的地位相当于牛顿第二定律在经典力学中的地位。一维的含时薛定谔方程形式为，其中$ V\left( x\right) $为势函数，相当于牛顿第二定律的力的地位。因此，理论上只要给定一个确定的势函数，以及一个确定的初始条件，就能得到粒子后续的运动情况。</p>
+<h3 id="无限深势阱箱"><a href="#无限深势阱箱" class="headerlink" title="无限深势阱箱"></a>无限深势阱箱</h3><p>势阱箱只是表示一个如图所示的势能函数而已，看看是不是挺形象的？关注一下它的形式：</p>
+<p>$ V=\begin{cases}0,0\leq x\leq L\\ \infty , 其他情况\end{cases} $</p>
+<p>L为势阱箱的边长</p>
+<h3 id="波恩-奥本海默近似-Born–Oppenheimer-approximation"><a href="#波恩-奥本海默近似-Born–Oppenheimer-approximation" class="headerlink" title="波恩-奥本海默近似(Born–Oppenheimer approximation)"></a>波恩-奥本海默近似(Born–Oppenheimer approximation)</h3><p>根据原子核比电子重得多的事实，假设分子中的原子核和电子的波函数可以分开处理。</p>
+<h3 id="平动能级"><a href="#平动能级" class="headerlink" title="平动能级"></a>平动能级</h3><p>实际上就是在实际上就是在势阱箱中解定态薛定谔方程(也就是上面说的Time-independent Schrodinger equation)<br>解得平动动能为:</p>
+<p>$\varepsilon_{n_{1},n_{2},n_{3}} = \left( \dfrac{n_{1}^{2}}{a^{2}}+\dfrac{n_{2}^{2}}{b^{2}}+\dfrac{n_{3}^{2}}{c^{2}}\right) = \dfrac{\hbar^{2} }{8m} $</p>
+<p>如果势阱箱为长方形的箱子，则a,b,c为其长宽高,$\hbar$是普朗克常量，m为分子质量<br>如果为立方箱则有：<br>$\varepsilon_{n_{1},n_{2},n_{3}}=\left(n_{1}^{2}+n_{2}^{2}+n_{3}^{2}\right) = \dfrac{\hbar^{2}}{8mV^{2/3}} $</p>
+<p>我们稍微观察一下不难看出能量是离散的，且平动能反比于箱子的尺寸。如果势阱箱足够大，平动能的量子化就会快速地变得越来越不明显。</p>
+<p>总结：</p>
+<ul>
+<li>平动能级是量子化的，或者说是孤立的离散的</li>
+<li>平动能总是大于零，表明箱中粒子总是大于零</li>
+<li>随着箱子尺寸的增加，平动能级的密度同样也增加，因此宏观箱子不再提供量子化的边界条件</li>
+<li>如果忽略分子间相互作用，那么每个分子的平动能级可用上面的公式计算出来</li>
+<li>体积对于关联单个分子的性质与宏观系统十分重要</li>
+</ul>
+<h3 id="转动能级"><a href="#转动能级" class="headerlink" title="转动能级"></a>转动能级</h3><p>总结：</p>
+<ul>
+<li>转动能级也是离散的、量子化的</li>
+<li>转动能级的间距相较于平动能级大</li>
+<li>转动能级是简并的</li>
+</ul>
+<h3 id="振动能级"><a href="#振动能级" class="headerlink" title="振动能级"></a>振动能级</h3><ul>
+<li>能量量子化，振动量子数可以选择0和正整数</li>
+<li>处于振动基态，一个给定振动的能量依然大于零(分子每时每刻都在振动)</li>
+<li>振动有动能和势能。在一个给定的振动能级随着振动位置的变化，势能和动能在互相转化</li>
+<li>同一个分子，甚至是同一个化学键，不同振动模式的振动能级不同。基于此，一个分子在IR和拉曼光谱中可以有多个特征峰</li>
+</ul>
+<h3 id="转动自由度和振动自由度"><a href="#转动自由度和振动自由度" class="headerlink" title="转动自由度和振动自由度"></a>转动自由度和振动自由度</h3>
             
         </article>
     </div>
@@ -267,7 +294,7 @@
 
  
 
-<script async src="/js/app.js?v=1627549576516"></script>
+<script async src="/js/app.js?v=1627809894140"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js"></script>
 <script>
